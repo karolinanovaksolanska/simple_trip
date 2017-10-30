@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Napkee export</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/datepicker.css">
+	<link rel="stylesheet" href="css/colorpicker.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="css/jquery.orgchart.css">
+	<link rel="stylesheet" href="css/jquery.treeview.css">
+	
+	
+	<style type="text/css">
+	#napkeeCanvas {
+		position:absolute;
+		left:0px;
+		top:0px;
+	}
+	.napkeeComponent {
+		position:absolute;
+		white-space: nowrap;
+	}
+	.napkeeRelativeComponent {
+		position:absolute;
+		white-space: nowrap;
+	}
+	
+	
+#nap1{
+	left:187px;
+	top:90px;
+	width:760px;
+	height:1415px;
+	z-index:1;
+	background-color:#FFFFFF;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+	border:1px solid #000;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+}
+	
+#nap2{
+	left:187px;
+	top:139px;
+	z-index:2;
+}
+#nap2.napkee{
+	width:760px;
+	height:22px;
+}
+	
+#nap3{
+	left:40px;
+	top:8px;
+	width:139px;
+	height:0px;
+	z-index:3;
+	font-size: 28px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:center;
+	color:#000000;
+}
+	
+#nap4{
+	left:205px;
+	top:8px;
+	width:109px;
+	height:33px;
+	z-index:4;
+	border:0px solid;
+}
+
+#nap4table{
+	left:392px;
+	top:98px;
+	width:109px;
+	height:33px;
+	z-index:5;
+	display:inline-table;
+}
+
+#nap4label{
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap5{
+	left:669px;
+	top:12px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:5;
+	border:0px solid;
+}
+	
+#nap6{
+	left:700px;
+	top:12px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:6;
+	border:0px solid;
+}
+	
+#nap7{
+	left:17px;
+	top:129px;
+	width:415px;
+	height:219px;
+	z-index:7;
+	border:0px solid;
+}
+
+#nap7table{
+	left:204px;
+	top:219px;
+	width:415px;
+	height:219px;
+	z-index:8;
+	display:inline-table;
+}
+
+#nap7label{
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap8{
+	left:484px;
+	top:129px;
+	width:95px;
+	height:95px;
+	z-index:8;
+	border:0px solid;
+}
+
+#nap8table{
+	left:671px;
+	top:219px;
+	width:95px;
+	height:95px;
+	z-index:9;
+	display:inline-table;
+}
+
+#nap8label{
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap9{
+	left:617px;
+	top:129px;
+	width:95px;
+	height:95px;
+	z-index:9;
+	border:0px solid;
+}
+
+#nap9table{
+	left:804px;
+	top:219px;
+	width:95px;
+	height:95px;
+	z-index:10;
+	display:inline-table;
+}
+
+#nap9label{
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap91_0{
+	left:17px;
+	top:364px;
+	width:378px;
+	height:0px;
+	z-index:0;
+	font-size: 20px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:center;
+	color:#000000;
+}
+	
+#nap91_1{
+	left:17px;
+	top:387px;
+	width:0px;
+	height:0px;
+	z-index:1;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap91_2{
+	left:17px;
+	top:408px;
+	width:0px;
+	height:0px;
+	z-index:2;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap91_3{
+	left:17px;
+	top:432px;
+	width:121.00000000000001px;
+	height:0px;
+	z-index:3;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap91_6{
+	left:322px;
+	top:406px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:6;
+	border:0px solid;
+}
+	
+#nap91_8{
+	left:16px;
+	top:479px;
+	width:121.00000000000001px;
+	height:0px;
+	z-index:8;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap91_9container{
+	left:127px;
+	top:479px;
+	z-index:9;
+	width:223px;
+	height:79px;
+	overflow:hidden;
+	border:none;
+}
+#nap91_9container table.napkee {
+	margin:0;
+	padding:0;
+	border-spacing:0px;
+	width:100%;
+	height:36px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:center;
+}
+
+#nap91_9container table.napkee th{
+	background-color:#CCC;
+	height:20px;
+	padding-left:5px;
+}
+#nap91_9container table.napkee td{
+	padding-left:5px;
+	height:30px;
+	border:0px;
+}
+
+#nap91_9container table.napkee .verticalLine{
+	border-right:1px solid #000;
+}
+
+#nap91_9container table.napkee .horizontalLine{
+	border-bottom:1px solid #000;
+}
+#nap91_9container table.napkee td.odd{
+	background-color:#EEEEEE;
+}
+#nap91_9container table.napkee td.even{
+	background-color:#FFFFFF;
+}
+
+#nap91_9container table.napkee td.filler{
+	height:0px;
+}
+
+	
+#nap91_10{
+	left:17px;
+	top:572px;
+	width:121.00000000000001px;
+	height:0px;
+	z-index:10;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap91_13{
+	left:17px;
+	top:453px;
+	width:121.00000000000001px;
+	height:0px;
+	z-index:12;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap91_14{
+	left:127px;
+	top:455px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:13;
+	border:0px solid;
+}
+	
+#nap91_15{
+	left:142px;
+	top:455px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:14;
+	border:0px solid;
+}
+	
+#nap91_16{
+	left:157px;
+	top:455px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:15;
+	border:0px solid;
+}
+	
+#nap91_17{
+	left:173px;
+	top:455px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:16;
+	border:0px solid;
+}
+	
+#nap91_18{
+	left:189px;
+	top:455px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:17;
+	border:0px solid;
+}
+	
+#nap91_19{
+	left:272px;
+	top:450px;
+	z-index:18;
+}
+
+#nap91_19.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap10{
+	left:484px;
+	top:254px;
+	width:95px;
+	height:95px;
+	z-index:11;
+	border:0px solid;
+}
+
+#nap10table{
+	left:671px;
+	top:344px;
+	width:95px;
+	height:95px;
+	z-index:12;
+	display:inline-table;
+}
+
+#nap10label{
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap90_0{
+	left:127px;
+	top:708px;
+	width:592px;
+	height:1px;
+	z-index:0;
+	background-color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+	
+#nap90_1{
+	left:16px;
+	top:726px;
+	width:121.00000000000001px;
+	height:0px;
+	z-index:1;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap90_2{
+	left:127px;
+	top:1206px;
+	width:592px;
+	height:88px;
+	z-index:2;
+	background-color:#FFFFFF;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+	border:1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+	
+#nap90_3{
+	left:620px;
+	top:1213px;
+	z-index:3;
+}
+
+#nap90_3.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap90_4{
+	left:127px;
+	top:878px;
+	width:592px;
+	height:107px;
+	z-index:4;
+	background-color:#FFFFFF;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+	border:1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+	
+#nap90_5{
+	left:620px;
+	top:888px;
+	z-index:5;
+}
+
+#nap90_5.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap90_6{
+	left:126px;
+	top:992px;
+	width:592px;
+	height:88px;
+	z-index:6;
+	background-color:#FFFFFF;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+	border:1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+	
+#nap90_7{
+	left:619px;
+	top:1002px;
+	z-index:7;
+}
+
+#nap90_7.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap90_8{
+	left:126px;
+	top:1087px;
+	width:592px;
+	height:112px;
+	z-index:8;
+	background-color:#FFFFFF;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+	border:1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+}
+	
+#nap90_9{
+	left:619px;
+	top:1097px;
+	z-index:9;
+}
+
+#nap90_9.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap90_10{
+	left:390px;
+	top:844px;
+	z-index:10;
+}
+
+#nap90_10.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap90_11{
+	left:127px;
+	top:726px;
+	width:591px;
+	height:106px;
+	z-index:11;
+	color:#000000;
+	background-color:#FFFFFF;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap90_12{
+	left:127px;
+	top:1242px;
+	width:592px;
+	height:1px;
+	z-index:12;
+	background-color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+	
+#nap90_13{
+	left:159px;
+	top:1218px;
+	width:53px;
+	height:17px;
+	z-index:13;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_14{
+	left:143px;
+	top:1219px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:14;
+	border:0px solid;
+}
+	
+#nap90_15{
+	left:482px;
+	top:1216px;
+	width:116px;
+	height:20px;
+	z-index:15;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_17{
+	left:127px;
+	top:917px;
+	width:592px;
+	height:1px;
+	z-index:17;
+	background-color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+	
+#nap90_18{
+	left:159px;
+	top:893px;
+	width:53px;
+	height:17px;
+	z-index:18;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_19{
+	left:143px;
+	top:894px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:19;
+	border:0px solid;
+}
+	
+#nap90_20{
+	left:482px;
+	top:891px;
+	width:116px;
+	height:20px;
+	z-index:20;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_21{
+	left:126px;
+	top:1031px;
+	width:592px;
+	height:1px;
+	z-index:21;
+	background-color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+	
+#nap90_22{
+	left:158px;
+	top:1007px;
+	width:53px;
+	height:17px;
+	z-index:22;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_23{
+	left:142px;
+	top:1008px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:23;
+	border:0px solid;
+}
+	
+#nap90_24{
+	left:481px;
+	top:1005px;
+	width:116px;
+	height:20px;
+	z-index:24;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_27{
+	left:158px;
+	top:1102px;
+	width:53px;
+	height:17px;
+	z-index:27;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_28{
+	left:142px;
+	top:1103px;
+	width:0px;
+	height:0px;
+	font-size:0px;
+	z-index:28;
+	border:0px solid;
+}
+	
+#nap90_29{
+	left:481px;
+	top:1100px;
+	width:116px;
+	height:20px;
+	z-index:29;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+	white-space: normal;
+}
+	
+#nap90_31{
+	left:126px;
+	top:1126px;
+	width:592px;
+	height:1px;
+	z-index:31;
+	background-color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+	
+#nap67{
+	left:472px;
+	top:1301px;
+	width:0px;
+	height:0px;
+	z-index:13;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration:none;
+}
+#nap67 li {
+	
+	height:0px;
+	line-height:0px;
+}
+#nap67 li a{
+	text-decoration:none;
+}
+	
+#nap71{
+	left:98px;
+	top:87px;
+	z-index:14;
+}
+
+#nap71.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap72{
+	left:17px;
+	top:87px;
+	width:0px;
+	z-index:15;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+	
+#nap73{
+	left:481px;
+	top:86px;
+	z-index:16;
+}
+
+#nap73.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap74{
+	left:591px;
+	top:86px;
+	z-index:17;
+}
+
+#nap74.napkee {
+	width:0px;
+	height:0px;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+	
+#nap92{
+	left:617px;
+	top:254px;
+	width:95px;
+	height:95px;
+	z-index:18;
+	border:0px solid;
+}
+
+#nap92table{
+	left:804px;
+	top:344px;
+	width:95px;
+	height:95px;
+	z-index:19;
+	display:inline-table;
+}
+
+#nap92label{
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+}
+	
+#nap93{
+	left:40px;
+	top:1344px;
+	width:694px;
+	height:1px;
+	z-index:19;
+	background-color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+	
+#nap94{
+	left:581px;
+	top:1370px;
+	width:0px;
+	height:0px;
+	z-index:20;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+#nap95{
+	left:658px;
+	top:1370px;
+	width:0px;
+	height:0px;
+	z-index:21;
+	font-size: 14px;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:left;
+	color:#000000;
+}
+	
+	</style>
+	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/jquery.migration.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.swfobject.1-0.5.min.js"></script>
+    <script src="js/swfobject.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/bootstrap-colorpicker.js"></script>
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/jquery.orgchart.min.js"></script>
+    <script src="js/jquery.treeview.min.js"></script>
+    <script src="js/jquery.tagcloud.min.js"></script>
+	
+  </head>
+  <body>
+  
+	
+
+
+	
+<div id="nap1" class="napkeeComponent napkeeCanvas">
+<span id="nap3" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
+	
+<img id="nap4" src="js/holder.js/109x33" class="napkeeRelativeComponent napkeeImage" />
+<table border="0" id="nap4table" class="napkeeComponent napkeeImageTable" >
+	<tr>
+		<td align="center" valign="middle">
+			<span id="nap4label" class="napkeeImageLabel">logo</span>
+		</td>
+	</tr>
+</table>
+
+	
+	<img id="nap5" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+	<img id="nap6" src="icons/napkee/sign-out.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<img id="nap7" src="js/holder.js/415x219" class="napkeeRelativeComponent napkeeImage" />
+<table border="0" id="nap7table" class="napkeeComponent napkeeImageTable" >
+	<tr>
+		<td align="center" valign="middle">
+			<span id="nap7label" class="napkeeImageLabel">foto 1</span>
+		</td>
+	</tr>
+</table>
+
+	
+<img id="nap8" src="js/holder.js/95x95" class="napkeeRelativeComponent napkeeImage" />
+<table border="0" id="nap8table" class="napkeeComponent napkeeImageTable" >
+	<tr>
+		<td align="center" valign="middle">
+			<span id="nap8label" class="napkeeImageLabel">2</span>
+		</td>
+	</tr>
+</table>
+
+	
+<img id="nap9" src="js/holder.js/95x95" class="napkeeRelativeComponent napkeeImage" />
+<table border="0" id="nap9table" class="napkeeComponent napkeeImageTable" >
+	<tr>
+		<td align="center" valign="middle">
+			<span id="nap9label" class="napkeeImageLabel">3</span>
+		</td>
+	</tr>
+</table>
+
+	
+<span id="nap91_0" class="napkeeRelativeComponent napkeeSubTitle">Festival Maroko rokoko za oko</span>
+	
+<span id="nap91_1" class="napkeeRelativeComponent napkeeLabel ">Datum a čas:</span>
+	
+<span id="nap91_2" class="napkeeRelativeComponent napkeeLabel ">Adresa:</span>
+	
+<span id="nap91_3" class="napkeeRelativeComponent napkeeLabel ">Webov&aacute; str&aacute;nka: </span>
+	
+	<img id="nap91_6" src="icons/napkee/globe.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<span id="nap91_8" class="napkeeRelativeComponent napkeeLabel ">Cen&iacute;k:</span>
+	
+<div id="nap91_9container" class="napkeeRelativeComponent napkeeDatagrid">
+	<table id="nap91_9" class="table">
+		<thead>
+	<tr>
+		<th class="verticalLine">Kategorie</th>
+		<th>Cena kč</th>
+</tr></thead>
+		<tbody><tr><td class="odd verticalLine">dospěl&iacute;</td><td class="odd">150</td></tr>
+<tr><td class="even verticalLine">studenti</td><td class="even">100</td></tr>
+</tbody>
+	</table>
+</div>
+	
+<span id="nap91_10" class="napkeeRelativeComponent napkeeLabel ">Popis:</span>
+	
+<span id="nap91_13" class="napkeeRelativeComponent napkeeLabel ">Hodnocen&iacute;:</span>
+	
+	<img id="nap91_14" src="icons/napkee/star.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+	<img id="nap91_15" src="icons/napkee/star.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+	<img id="nap91_16" src="icons/napkee/star.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+	<img id="nap91_17" src="icons/napkee/star.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+	<img id="nap91_18" src="icons/napkee/star-o.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<button id="nap91_19" type="button" class="napkeeRelativeComponent napkeeButton btn">ohodnotit</button>
+	
+<img id="nap10" src="js/holder.js/95x95" class="napkeeRelativeComponent napkeeImage" />
+<table border="0" id="nap10table" class="napkeeComponent napkeeImageTable" >
+	<tr>
+		<td align="center" valign="middle">
+			<span id="nap10label" class="napkeeImageLabel">4</span>
+		</td>
+	</tr>
+</table>
+
+	
+<div id="nap90_0" class="napkeeRelativeComponent napkeeHrule"></div>
+	
+<span id="nap90_1" class="napkeeRelativeComponent napkeeLabel ">Diskuze:</span>
+	
+<div id="nap90_2" class="napkeeRelativeComponent napkeeCanvas"></div>
+	
+<button id="nap90_3" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+	
+<div id="nap90_4" class="napkeeRelativeComponent napkeeCanvas"></div>
+	
+<button id="nap90_5" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+	
+<div id="nap90_6" class="napkeeRelativeComponent napkeeCanvas"></div>
+	
+<button id="nap90_7" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+	
+<div id="nap90_8" class="napkeeRelativeComponent napkeeCanvas"></div>
+	
+<button id="nap90_9" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+	
+<button id="nap90_10" type="button" class="napkeeRelativeComponent napkeeButton btn">odeslat</button>
+	
+<textarea id="nap90_11" class="napkeeRelativeComponent napkeeTextarea">Some text<br/>A second line of text</textarea>
+	
+<div id="nap90_12" class="napkeeRelativeComponent napkeeHrule"></div>
+	
+<div id="nap90_13" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/></div>
+	
+	<img id="nap90_14" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<div id="nap90_15" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972 23:59:59<br/></div>
+	
+<div id="nap90_17" class="napkeeRelativeComponent napkeeHrule"></div>
+	
+<div id="nap90_18" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/></div>
+	
+	<img id="nap90_19" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<div id="nap90_20" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972 23:00:00<br/></div>
+	
+<div id="nap90_21" class="napkeeRelativeComponent napkeeHrule"></div>
+	
+<div id="nap90_22" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/></div>
+	
+	<img id="nap90_23" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<div id="nap90_24" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">8. 8. 1972 23:59:59<br/></div>
+	
+<div id="nap90_27" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/></div>
+	
+	<img id="nap90_28" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+	
+<div id="nap90_29" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">7. 8. 1972 23:00:00<br/></div>
+	
+<div id="nap90_31" class="napkeeRelativeComponent napkeeHrule"></div>
+	
+<div id="nap67" class="btn-group napkeeComponent napkeeButtonbar">
+<a class="btn" href="#" id="nap67i0">&lt;&lt;</a><a class="btn" href="#" id="nap67i1">&lt;</a><a class="btn active" href="#" id="nap67i2">1</a><a class="btn" href="#" id="nap67i3">2</a><a class="btn" href="#" id="nap67i4">3</a><a class="btn" href="#" id="nap67i5">&gt;</a><a class="btn" href="#" id="nap67i6">&gt;&gt;</a>
+</div>
+	
+<button id="nap71" type="button" class="napkeeRelativeComponent napkeeButton btn">přidat do itiner&aacute;ře</button>
+	
+<select id="nap72" class="napkeeRelativeComponent napkeeCombobox">
+<option>v&yacute;let A</option>
+</select>
+	
+<button id="nap73" type="button" class="napkeeRelativeComponent napkeeButton btn">nov&yacute; itiner&aacute;ř</button>
+	
+<button id="nap74" type="button" class="napkeeRelativeComponent napkeeButton btn">přidat do obl&iacute;ben&yacute;ch</button>
+	
+<img id="nap92" src="js/holder.js/95x95" class="napkeeRelativeComponent napkeeImage" />
+<table border="0" id="nap92table" class="napkeeComponent napkeeImageTable" >
+	<tr>
+		<td align="center" valign="middle">
+			<span id="nap92label" class="napkeeImageLabel">4</span>
+		</td>
+	</tr>
+</table>
+
+	
+<div id="nap93" class="napkeeRelativeComponent napkeeHrule"></div>
+	
+<span id="nap94" class="napkeeRelativeComponent napkeeLabel ">N&aacute;pověda</span>
+	
+<span id="nap95" class="napkeeRelativeComponent napkeeLabel ">Kontakt</span>
+	</div>
+	
+<div id="nap2" class="napkeeComponent napkeeMenubar navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li id="nap2i0"><a href="#">Hlavní stránka</a></li><li id="nap2i1"><a href="#">Plánovač</a></li>
+		</ul>
+	</div>
+</div>
+	
+	
+    <script type="text/javascript" charset="utf-8">
+	    function showMockup(url,params){
+			var finalUrl = url + "?";
+			if (params!=null){
+				jQuery.each(params, function(par, field){
+					finalUrl += par + "=" + $("#"+field).val() + "&";
+				});
+			}
+			location.href = finalUrl;
+		}
+		$(document).ready(function(){
+			$(".accordion").each(function(){
+				var _acc = $(this);
+				_acc.find(".accordion-inner").height(_acc.height() - (_acc.find(".accordion-inner").length * 36));
+			});
+			$(document).on("click", function(e){
+				$("[data-date]").datepicker('show');
+			});
+		
+			
+$("#nap1").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+
+$("#nap2").click(function(event){
+});
+
+$("#nap2i0").click(function(event){
+	showMockup('Hlavnístránka.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+
+$("#nap2i1").click(function(event){
+	showMockup('Plánovač.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+
+$("#nap2i2").click(function(event){
+});
+
+	
+$("#nap3").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap4").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap5").click(function(event){
+	showMockup('Detailakcesmenu.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap6").click(function(event){
+	showMockup('Kontakt.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap7").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap8").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap9").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_0").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_1").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_2").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_3").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_6").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_8").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+
+	
+$("#nap91_10").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_13").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_14").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_15").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_16").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_17").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_18").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap91_19").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap10").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_1").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_2").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_3").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_4").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_5").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_6").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_7").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_8").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_9").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_10").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_13").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_14").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_15").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_18").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_19").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_20").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_22").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_23").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_24").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_27").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_28").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap90_29").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+
+$("#nap67").click(function(event){
+});
+
+	
+$("#nap71").click(function(event){
+	showMockup('Detailitineráře.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap72").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap73").click(function(event){
+	showMockup('Plánovač.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap74").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap92").click(function(event){
+	
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap94").click(function(event){
+	showMockup('Nápověda.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+$("#nap95").click(function(event){
+	showMockup('Kontakt.html');
+	event.stopPropagation();
+	event.preventDefault();
+
+});
+	
+		});
+	</script>
+  </body>
+</html>
