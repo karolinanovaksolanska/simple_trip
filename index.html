@@ -1,430 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Simple trip - prostě cestujte</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/datepicker.css">
-	<link rel="stylesheet" href="css/colorpicker.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<link rel="stylesheet" href="css/jquery.orgchart.css">
-	<link rel="stylesheet" href="css/jquery.treeview.css">
-	
-	
-	<style type="text/css">
-	#napkeeCanvas {
-		position:absolute;
-		left:0px;
-		top:0px;
-	}
-	.napkeeComponent {
-		position:absolute;
-		white-space: nowrap;
-	}
-	.napkeeRelativeComponent {
-		position:absolute;
-		white-space: nowrap;
-	}
-	
-	
-#nap2{
-	left: 5%;
-	width: 90%;
-	right: 5%;
-	height:100%;
-	z-index:1;
-	border:1px solid #000;
-	-moz-border-radius:0px;
-	-webkit-border-radius:0px;
-}
-	
-#nap3{
-	left:187px;
-	top:155px;
-	z-index:2;
-}
-#nap3.napkee{
-	width:760px;
-	height:29px;
-}
-	
-#nap4{
-	left:41px;
-	top:16px;
-	width:139px;
-	height:33px;
-	z-index:3;
-	font-size: 28px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-	color:#000000;
-}
-	
-#nap6{
-	left:201px;
-	top:16px;
-	width:109px;
-	height:33px;
-	z-index:4;
-	border:0px solid;
-}
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/colorpicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
 
-#nap6table{
-	left:388px;
-	top:106px;
-	width:109px;
-	height:33px;
-	z-index:5;
-	display:inline-table;
-}
 
-#nap6label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap12{
-	left:41px;
-	top:156px;
-	width:697px;
-	height:1px;
-	z-index:5;
-	background-color:#000000;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-}
-	
-#nap14{
-	left:41px;
-	top:135px;
-	width:75px;
-	height:21px;
-	z-index:6;
-	font-size: 18px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-	color:#000000;
-}
-	
-#nap15{
-	left:93px;
-	top:172px;
-	width:158px;
-	height:102px;
-	z-index:7;
-	border:0px solid;
-}
+    <style type="text/css">
 
-#nap15table{
-	left:280px;
-	top:262px;
-	width:158px;
-	height:102px;
-	z-index:8;
-	display:inline-table;
-}
+        #nap35 {
+            left: 144px;
+            top: 363px;
+            z-index: 16;
+        }
 
-#nap15label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap17{
-	left:78px;
-	top:279px;
-	width:189px;
-	height:84px;
-	z-index:8;
-	color:#000000;
-	background-color:#FFFFFF;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-}
-	
-#nap18{
-	left:14px;
-	top:249px;
-	width:48px;
-	height:48px;
-	font-size:48px;
-	z-index:9;
-	border:0px solid;
-}
-	
-#nap19{
-	left:709px;
-	top:249px;
-	width:48px;
-	height:48px;
-	font-size:48px;
-	z-index:10;
-	border:0px solid;
-}
-	
-#nap20{
-	left:304px;
-	top:172px;
-	width:158px;
-	height:102px;
-	z-index:11;
-	border:0px solid;
-}
+        #nap35.napkee {
+            width: 57px;
+            height: 27px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
 
-#nap20table{
-	left:491px;
-	top:262px;
-	width:158px;
-	height:102px;
-	z-index:12;
-	display:inline-table;
-}
+        #nap36 {
+            left: 355px;
+            top: 363px;
+            z-index: 17;
+        }
 
-#nap20label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap21{
-	left:289px;
-	top:279px;
-	width:189px;
-	height:84px;
-	z-index:12;
-	color:#000000;
-	background-color:#FFFFFF;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-}
-	
-#nap22{
-	left:520px;
-	top:172px;
-	width:158px;
-	height:102px;
-	z-index:13;
-	border:0px solid;
-}
+        #nap36.napkee {
+            width: 57px;
+            height: 27px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
 
-#nap22table{
-	left:707px;
-	top:262px;
-	width:158px;
-	height:102px;
-	z-index:14;
-	display:inline-table;
-}
+        #nap37 {
+            left: 570px;
+            top: 363px;
+            z-index: 18;
+        }
 
-#nap22label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap23{
-	left:505px;
-	top:279px;
-	width:189px;
-	height:84px;
-	z-index:14;
-	color:#000000;
-	background-color:#FFFFFF;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-}
-	
-#nap25{
-	left:41px;
-	top:422px;
-	width:694px;
-	height:1px;
-	z-index:15;
-	background-color:#000000;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-}
-	
-#nap35{
-	left:144px;
-	top:363px;
-	z-index:16;
-}
+        #nap37.napkee {
+            width: 57px;
+            height: 27px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
 
-#nap35.napkee {
-	width:57px;
-	height:27px;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
+        #nap42 {
+            left: 721px;
+            top: 30px;
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            z-index: 20;
+            border: 0px solid;
+        }
 
-	
-#nap36{
-	left:355px;
-	top:363px;
-	z-index:17;
-}
+    </style>
 
-#nap36.napkee {
-	width:57px;
-	height:27px;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap37{
-	left:570px;
-	top:363px;
-	z-index:18;
-}
-
-#nap37.napkee {
-	width:57px;
-	height:27px;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap41{
-	left:568px;
-	top:30px;
-	width:137px;
-	z-index:19;
-	background-color:#FFFFFF;
-	color:#000000;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap42{
-	left:721px;
-	top:30px;
-	width:24px;
-	height:24px;
-	font-size:24px;
-	z-index:20;
-	border:0px solid;
-}
-	
-#nap43{
-	left:415px;
-	top:8px;
-	width:40.7px;
-	height:21px;
-	z-index:21;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap44{
-	left:568px;
-	top:8px;
-	width:36.300000000000004px;
-	height:21px;
-	z-index:22;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap45{
-	left:415px;
-	top:30px;
-	width:137px;
-	z-index:23;
-	background-color:#FFFFFF;
-	color:#000000;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap51{
-	left:582px;
-	top:448px;
-	width:67.10000000000001px;
-	height:21px;
-	z-index:24;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap52{
-	left:659px;
-	top:448px;
-	width:50.6px;
-	height:21px;
-	z-index:25;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-	</style>
-	
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="js/jquery.migration.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.migration.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.swfobject.1-0.5.min.js"></script>
     <script src="js/swfobject.js"></script>
     <script src="js/jquery.sparkline.min.js"></script>
@@ -434,278 +87,202 @@
     <script src="js/jquery.orgchart.min.js"></script>
     <script src="js/jquery.treeview.min.js"></script>
     <script src="js/jquery.tagcloud.min.js"></script>
-	
-  </head>
-  <body>
-  
-	
+
+</head>
+<body>
 
 
-	
-<div id="nap2" class="napkeeComponent napkeeCanvas">
-<span id="nap4" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
-	
-<img id="nap6" src="js/holder.js/109x33" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap6table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap6label" class="napkeeImageLabel">logo</span>
-		</td>
-	</tr>
-</table>
+<div id="inner-page" class="napkeeComponent napkeeCanvas">
+    <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
 
-	
-<div id="nap12" class="napkeeRelativeComponent napkeeHrule"></div>
+    <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
 
-<span id="nap14" class="napkeeRelativeComponent napkeeSubTitle">Popul&aacute;rn&iacute;</span>
-	
-<img id="nap15" src="js/holder.js/158x102" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap15table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap15label" class="napkeeImageLabel">foto místa</span>
-		</td>
-	</tr>
-</table>
+    <div class="sign-in-form">
+        <label for="email-field" style="display: inline">E-mail</label>
+        <input id="email-field" style="display: inline" type="text" value="client@example.com"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <label for="passwd-field" style="display: inline">Heslo</label>
+        <input id="passwd-field" style="display: inline" type="text" value="*********"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <img id="nap42" style="display: inline" src="icons/sign-in.png" class=""/>
+    </div>
 
-	
-<textarea id="nap17" class="napkeeRelativeComponent napkeeTextarea"><b>Př&iacute;kladn&yacute; festival</b><br/>1. 1. 2001<br/>Mlad&aacute; Boleslav<br/>150kč / os.</textarea>
-	
-	<img id="nap18" src="icons/napkee/angle-double-left.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap19" src="icons/napkee/angle-double-right.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<img id="nap20" src="js/holder.js/158x102" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap20table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap20label" class="napkeeImageLabel">foto místa</span>
-		</td>
-	</tr>
-</table>
+    <div id="menu" class="navbar-out">
+        <div class="navbar-in">
+            <ul class="nav">
+                <div><li id="menui0" class="active"><a href="#">Hlavní stránka</a></li></div>
+                <div><li id="menui1"><a href="#">Plánovač</a></li></div>
+                <div><li id="menui2"><a href="#">Registrace</a></li></div>
+            </ul>
+        </div>
+    </div>
 
-	
-<textarea id="nap21" class="napkeeRelativeComponent napkeeTextarea"><b>V&iacute;t&aacute;me &uacute;nor</b><br/>2.1. 2001<br/>Zl&iacute;n<br/>zdarma</textarea>
-	
-<img id="nap22" src="js/holder.js/158x102" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap22table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap22label" class="napkeeImageLabel">foto místa</span>
-		</td>
-	</tr>
-</table>
+   <br/>
 
-	
-<textarea id="nap23" class="napkeeRelativeComponent napkeeTextarea"><b>Snatch &ndash; premi&eacute;ra</b><br/>19. 1. 2001<br/>Pardubice<br/>80kč / os.</textarea>
-	
-<div id="nap25" class="napkeeRelativeComponent napkeeHrule"></div>
-	
-<button id="nap35" type="button" class="napkeeRelativeComponent napkeeButton btn">detail</button>
-	
-<button id="nap36" type="button" class="napkeeRelativeComponent napkeeButton btn">detail</button>
-	
-<button id="nap37" type="button" class="napkeeRelativeComponent napkeeButton btn">detail</button>
-	
-<input id="nap41" type="text" value="*********" class="napkeeRelativeComponent napkeeTextinput" />
-	
-	<img id="nap42" src="icons/napkee/sign-in.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<span id="nap43" class="napkeeRelativeComponent napkeeLabel ">E&ndash;mail</span>
-	
-<span id="nap44" class="napkeeRelativeComponent napkeeLabel ">Heslo</span>
+    <div class="page-title">Populární</div>
 
-<input id="nap45" type="text" value="client@example.com" class="napkeeRelativeComponent napkeeTextinput" />
+    <div class="outer-slide-div">
+        <div class="arrow-icon1"><img  src="icons/prev-icon.png" class=""/></div>
+        <div class="inner-slider-div">
+            <p>
+                <img class="img-landing-page" src="images/prague.jpg" class=""/>
+                <br/>
+                <b>Den ve Staré Praze</b><br/>1. 1. 2001<br/>Praha<br/>500kč / os.
+                <br/>
+                <button id="btn-1" type="button" class="button btn">detail</button>
+            </p>
+        </div>
+        <div class="inner-slider-div">
+            <p>
+                <img class="img-landing-page" src="images/ostrava.jpg" class=""/>
+                <br/>
+                <b>Vyhlídka na severní Moravě</b><br/>2.1. 2001<br/>Ostrava<br/>zdarma
+                <br/>
+                <button id="btn-2" type="button" class="button btn">detail</button>
+            </p>
+        </div>
+        <div class="inner-slider-div">
+            <p>
+                <img class="img-landing-page" src="images/krumlov.jpg" class=""/>
+                <br/>
+                <b>Dracula premiéra</b><br/>19. 6. 2001<br/>Český Krumlov<br/>300kč / os.
+                <br/>
+                <button id="btn-3" type="button" class="button btn">detail</button>
+            </p>
+        </div>
+        <div class="arrow-icon2"><img src="icons/next-icon.png" class=""/></div>
+    </div>
 
-<span id="nap51" class="napkeeRelativeComponent napkeeLabel ">N&aacute;pověda</span>
-	
-<span id="nap52" class="napkeeRelativeComponent napkeeLabel ">Kontakt</span>
-	</div>
-	
-<div id="nap3" class="napkeeComponent napkeeMenubar navbar">
-	<div class="navbar-inner">
-		<ul class="nav">
-			<li id="nap3i0" class="active"><a href="#">Hlavní stránka</a></li><li id="nap3i1"><a href="#">Plánovač</a></li><li id="nap3i2"><a href="#">Registrace</a></li>
-		</ul>
-	</div>
+    <hr>
+
+    <div class="footer">
+        <div id="help" class="">Nápověda</div>
+        <div id="contact" class="">Kontakt</div>
+    </div>
 </div>
-	
-	
-    <script type="text/javascript" charset="utf-8">
-	    function showMockup(url,params){
-			var finalUrl = url + "?";
-			if (params!=null){
-				jQuery.each(params, function(par, field){
-					finalUrl += par + "=" + $("#"+field).val() + "&";
-				});
-			}
-			location.href = finalUrl;
-		}
-		$(document).ready(function(){
-			$(".accordion").each(function(){
-				var _acc = $(this);
-				_acc.find(".accordion-inner").height(_acc.height() - (_acc.find(".accordion-inner").length * 36));
-			});
-			$(document).on("click", function(e){
-				$("[data-date]").datepicker('show');
-			});
-		
-			
-$("#nap2").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
 
-});
-	
 
-$("#nap3").click(function(event){
-});
+<script type="text/javascript" charset="utf-8">
+    function showMockup(url, params) {
+        var finalUrl = url + "?";
+        if (params != null) {
+            jQuery.each(params, function (par, field) {
+                finalUrl += par + "=" + $("#" + field).val() + "&";
+            });
+        }
+        location.href = finalUrl;
+    }
 
-$("#nap3i0").click(function(event){
-});
+    $(document).ready(function () {
 
-$("#nap3i1").click(function(event){
-	showMockup('Plánovač.html');
-	event.stopPropagation();
-	event.preventDefault();
+        $("#menui1").click(function (event) {
+            showMockup('planner.html');
+            event.stopPropagation();
+            event.preventDefault();
+        });
 
-});
+        $("#menui2").click(function (event) {
+            showMockup('registration.html');
+            event.stopPropagation();
+            event.preventDefault();
+        });
 
-$("#nap3i2").click(function(event){
-	showMockup('Registrace.html');
-	event.stopPropagation();
-	event.preventDefault();
 
-});
+        $("#page-title").click(function (event) {
 
-$("#nap3i3").click(function(event){
-});
+            event.stopPropagation();
+            event.preventDefault();
 
-	
-$("#nap4").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap6").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        $("#img-landing-page").click(function (event) {
+            showMockup('Detailakce.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap14").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap15").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
+        $("#inner-page0").click(function (event) {
+            showMockup('Detailakce.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap18").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap19").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        $("#inner-page2").click(function (event) {
+            showMockup('Detailakce.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap20").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap22").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
+        $("#btn-1").click(function (event) {
+            showMockup('Detailakce.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap35").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap36").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
+        $("#btn-2").click(function (event) {
+            showMockup('Detailakce.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap37").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap41").click(function(event){
-	event.stopPropagation();
-	event.preventDefault();
-});
-	
-$("#nap42").click(function(event){
-	showMockup('Hlavnístránka.html');
-	event.stopPropagation();
-	event.preventDefault();
+        $("#btn-3").click(function (event) {
+            showMockup('Detailakce.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap43").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-$("#nap44").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
+        $("#passwd-field").click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        });
 
-});
-	
-$("#nap45").click(function(event){
-	event.stopPropagation();
-	event.preventDefault();
-});
-	
-$("#nap51").click(function(event){
-	showMockup('Nápověda.html');
-	event.stopPropagation();
-	event.preventDefault();
+        $("#nap42").click(function (event) {
+            showMockup('Hlavnístránka.html');
+            event.stopPropagation();
+            event.preventDefault();
 
-});
-	
-$("#nap52").click(function(event){
-	showMockup('Kontakt.html');
-	event.stopPropagation();
-	event.preventDefault();
+        });
 
-});
-	
-		});
-	</script>
-  </body>
+        $("#email-label").click(function (event) {
+
+            event.stopPropagation();
+            event.preventDefault();
+
+        });
+
+        $("#passwd-label").click(function (event) {
+
+            event.stopPropagation();
+            event.preventDefault();
+
+        });
+
+        $("#email-field").click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+        });
+
+        $("#help").click(function (event) {
+            showMockup('help.html');
+            event.stopPropagation();
+            event.preventDefault();
+
+        });
+
+        $("#contact").click(function (event) {
+            showMockup('contact.html');
+            event.stopPropagation();
+            event.preventDefault();
+
+        });
+
+    });
+</script>
+</body>
 </html>
