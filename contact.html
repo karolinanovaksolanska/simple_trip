@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Napkee export</title>
+    <title>Simple trip - Kontakt</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -12,326 +12,7 @@
 	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
 	<link rel="stylesheet" href="css/jquery.orgchart.css">
 	<link rel="stylesheet" href="css/jquery.treeview.css">
-	
-	
-	<style type="text/css">
-	#napkeeCanvas {
-		position:absolute;
-		left:0px;
-		top:0px;
-	}
-	.napkeeComponent {
-		position:absolute;
-		white-space: nowrap;
-	}
-	.napkeeRelativeComponent {
-		position:absolute;
-		white-space: nowrap;
-	}
-	
-	
-#nap1{
-	left:187px;
-	top:90px;
-	width:760px;
-	height:482px;
-	z-index:1;
-	background-color:#FFFFFF;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	border:1px solid #000;
-	-moz-border-radius:0px;
-	-webkit-border-radius:0px;
-}
-	
-#nap3{
-	left:23px;
-	top:24px;
-	width:139px;
-	height:0px;
-	z-index:2;
-	font-size: 28px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-	color:#000000;
-}
-	
-#nap4{
-	left:205px;
-	top:24px;
-	width:109px;
-	height:33px;
-	z-index:3;
-	border:0px solid;
-}
 
-#nap4table{
-	left:392px;
-	top:114px;
-	width:109px;
-	height:33px;
-	z-index:4;
-	display:inline-table;
-}
-
-#nap4label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap7{
-	left:187px;
-	top:155px;
-	width:760px;
-	height:1px;
-	z-index:4;
-	background-color:#000000;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-}
-	
-#nap8{
-	left:557px;
-	top:31px;
-	width:137px;
-	z-index:5;
-	background-color:#FFFFFF;
-	color:#000000;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap11{
-	left:710px;
-	top:31px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:6;
-	border:0px solid;
-}
-	
-#nap13{
-	left:404px;
-	top:9px;
-	width:0px;
-	height:0px;
-	z-index:7;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap14{
-	left:557px;
-	top:9px;
-	width:0px;
-	height:0px;
-	z-index:8;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap15{
-	left:404px;
-	top:31px;
-	width:137px;
-	z-index:9;
-	background-color:#FFFFFF;
-	color:#000000;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap21{
-	left:205px;
-	top:110px;
-	width:330px;
-	height:310px;
-	z-index:10;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	background-color:#FFFFFF;
-	margin:0;
-	padding:0;
-}
-	
-#nap20{
-	left:100px;
-	top:256px;
-	z-index:11;
-}
-
-#nap20.napkee {
-	width:128px;
-	height:47px;
-	font-size: 18px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap23{
-	left:23px;
-	top:98px;
-	width:284px;
-	z-index:12;
-	background-color:#FFFFFF;
-	color:#000000;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap25{
-	left:23px;
-	top:44px;
-	width:284px;
-	z-index:13;
-	background-color:#FFFFFF;
-	color:#000000;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap27{
-	left:23px;
-	top:77px;
-	width:84.7px;
-	height:0px;
-	z-index:14;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap29{
-	left:23px;
-	top:134px;
-	width:163.9px;
-	height:0px;
-	z-index:15;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap30{
-	left:23px;
-	top:23px;
-	width:237.60000000000002px;
-	height:0px;
-	z-index:16;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap48{
-	left:187px;
-	top:155px;
-	z-index:17;
-}
-#nap48.napkee{
-	width:760px;
-	height:29px;
-}
-	
-#nap49{
-	left:40px;
-	top:429px;
-	width:694px;
-	height:1px;
-	z-index:18;
-	background-color:#000000;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-}
-	
-#nap50{
-	left:581px;
-	top:455px;
-	width:0px;
-	height:0px;
-	z-index:19;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap51{
-	left:658px;
-	top:455px;
-	width:0px;
-	height:0px;
-	z-index:20;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap52{
-	left:23px;
-	top:155px;
-	width:284px;
-	height:93px;
-	z-index:21;
-	color:#000000;
-	background-color:#FFFFFF;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-	</style>
-	
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="js/jquery.migration.js"></script>
@@ -349,69 +30,67 @@
 	
   </head>
   <body>
-  
-	
 
 
-	
-<div id="nap1" class="napkeeComponent napkeeCanvas">
-<span id="nap3" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
-	
-<img id="nap4" src="js/holder.js/109x33" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap4table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap4label" class="napkeeImageLabel">logo</span>
-		</td>
-	</tr>
-</table>
+
+  <div id="inner-page" class="napkeeComponent napkeeCanvas">
+	  <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
+
+	  <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
+
+	  <div class="sign-in-form">
+		  <label for="email-field" style="display: inline">E-mail</label>
+		  <input id="email-field" style="display: inline" type="text" value="client@example.com"
+				 class="napkeeRelativeComponent napkeeTextinput"/>
+		  <label for="passwd-field" style="display: inline">Heslo</label>
+		  <input id="passwd-field" style="display: inline" type="text" value="*********"
+				 class="napkeeRelativeComponent napkeeTextinput"/>
+		  <img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/>
+	  </div>
+
+	  <div id="menu" class="navbar-out">
+		  <div class="navbar-in">
+			  <ul class="nav">
+				  <div>
+					  <li id="menui0" class="active"><a href="#">Hlavní stránka</a></li>
+				  </div>
+				  <div>
+					  <li id="menui1"><a href="planner.html">Plánovač</a></li>
+				  </div>
+				  <div>
+					  <li id="menui2"><a href="registration.html">Registrace</a></li>
+				  </div>
+			  </ul>
+		  </div>
+	  </div>
+
+	  <fieldset id="registration">
+		  <h3>Kontaktní formulář</h3>
+		  <form id="contact-form">
+			  <span class="contact-form">Jméno a Příjmení</span>
+			  <input class="contact-form-input" type="text" value="Jan Novák" />
+				<br>
+			  <span class="contact-form">E&ndash;mail</span>
+			  <input class="contact-form-input" type="text" value="client@example.com"  />
+			  <br>
+			  <span class="contact-form">Zpráva</span>
+			  <textarea id="contact-text-box" class="">Dobrý den, Nefunguje mi přihlášení.S pozdravem, Novák</textarea>
+
+			  <div class="button"><button id="contact-button" type="button" class="">Odeslat</button></div>
+
+		  </form>
+	  </fieldset>
+
+	  <hr>
+
+	  <div class="footer">
+		  <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>
+		  <div id="contact" class="help-contact"><a href="contact.html">Kontakt</a></div>
+	  </div>
+  </div>
 
 	
-<input id="nap8" type="text" value="*********" class="napkeeRelativeComponent napkeeTextinput" />
-	
-	<img id="nap11" src="icons/napkee/sign-in.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<span id="nap13" class="napkeeRelativeComponent napkeeLabel ">E&ndash;mail</span>
-	
-<span id="nap14" class="napkeeRelativeComponent napkeeLabel ">Heslo</span>
-	
-<input id="nap15" type="text" value="client@example.com" class="napkeeRelativeComponent napkeeTextinput" />
-	
-<fieldset id="nap21" class="napkeeRelativeComponent napkeeFieldSet">
-	<legend>Kontaktn&iacute; formul&aacute;ř</legend>
-	
-<button id="nap20" type="button" class="napkeeRelativeComponent napkeeButton btn">Odeslat</button>
-	
-<input id="nap23" type="text" value="client@example.com" class="napkeeRelativeComponent napkeeTextinput" />
-	
-<input id="nap25" type="text" value="Jan Nov&aacute;k" class="napkeeRelativeComponent napkeeTextinput" />
-	
-<span id="nap27" class="napkeeRelativeComponent napkeeLabel ">E&ndash;mail</span>
-	
-<span id="nap29" class="napkeeRelativeComponent napkeeLabel ">Zpr&aacute;va</span>
-	
-<span id="nap30" class="napkeeRelativeComponent napkeeLabel ">Jm&eacute;no a Př&iacute;jmen&iacute;</span>
-	
-<textarea id="nap52" class="napkeeRelativeComponent napkeeTextarea">Dobr&yacute; den,<br/>Nefunguje mi přihl&aacute;&scaron;en&iacute;.<br/>S pozdravem,<br/>Nov&aacute;k</textarea>
-	
-</fieldset>
-	
-<div id="nap49" class="napkeeRelativeComponent napkeeHrule"></div>
-	
-<span id="nap50" class="napkeeRelativeComponent napkeeLabel ">N&aacute;pověda</span>
-	
-<span id="nap51" class="napkeeRelativeComponent napkeeLabel ">Kontakt</span>
-	</div>
-	
-<div id="nap7" class="napkeeComponent napkeeHrule"></div>
-	
-<div id="nap48" class="napkeeComponent napkeeMenubar navbar">
-	<div class="navbar-inner">
-		<ul class="nav">
-			<li id="nap48i0" class="active"><a href="#">Hlavní stránka</a></li><li id="nap48i1"><a href="#">Plánovač</a></li><li id="nap48i2"><a href="#">Registrace</a></li>
-		</ul>
-	</div>
-</div>
+
 	
 	
     <script type="text/javascript" charset="utf-8">
