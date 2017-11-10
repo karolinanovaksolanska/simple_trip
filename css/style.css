@@ -797,7 +797,7 @@ hr{
 	width: 24px;
 }
 
-#planner {
+#planner, #registration {
 	width: 80%;
 	background-color: #FFFFFF;
 	margin-left: auto;
@@ -806,7 +806,7 @@ hr{
 	padding: 10px;
 }
 
-#planner h3 {
+#planner h3, #registration h3 {
 	text-align: center;
 	color: #000;
 }
@@ -868,4 +868,24 @@ hr{
 #search-misto-akci-planner{
     margin-left: 20px;
     text-align: center;
+}
+
+.reg-form{
+    font-weight: bold;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100px;
+    display: inline-block;
+}
+
+#register-button{
+    background-color: #2c4574;
+    height: 50px;
+    min-width: 150px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
