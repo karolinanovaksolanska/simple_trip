@@ -12,66 +12,7 @@
     <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
     <link rel="stylesheet" href="css/jquery.orgchart.css">
     <link rel="stylesheet" href="css/jquery.treeview.css">
-
-
-    <style type="text/css">
-
-        #nap35 {
-            left: 144px;
-            top: 363px;
-            z-index: 16;
-        }
-
-        #nap35.napkee {
-            width: 57px;
-            height: 27px;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: normal;
-            text-decoration: none;
-        }
-
-        #nap36 {
-            left: 355px;
-            top: 363px;
-            z-index: 17;
-        }
-
-        #nap36.napkee {
-            width: 57px;
-            height: 27px;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: normal;
-            text-decoration: none;
-        }
-
-        #nap37 {
-            left: 570px;
-            top: 363px;
-            z-index: 18;
-        }
-
-        #nap37.napkee {
-            width: 57px;
-            height: 27px;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: normal;
-            text-decoration: none;
-        }
-
-        #nap42 {
-            left: 721px;
-            top: 30px;
-            width: 24px;
-            height: 24px;
-            font-size: 24px;
-            z-index: 20;
-            border: 0px solid;
-        }
-
-    </style>
+    <script src="js/simpletripscript.js" ></script>
 
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -104,15 +45,15 @@
         <label for="passwd-field" style="display: inline">Heslo</label>
         <input id="passwd-field" style="display: inline" type="text" value="*********"
                class="napkeeRelativeComponent napkeeTextinput"/>
-        <img id="nap42" style="display: inline" src="icons/sign-in.png" class=""/>
+        <img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/>
     </div>
 
     <div id="menu" class="navbar-out">
         <div class="navbar-in">
             <ul class="nav">
                 <div><li id="menui0" class="active"><a href="#">Hlavní stránka</a></li></div>
-                <div><li id="menui1"><a href="#">Plánovač</a></li></div>
-                <div><li id="menui2"><a href="#">Registrace</a></li></div>
+                <div><li id="menui1"><a href="planner.html">Plánovač</a></li></div>
+                <div><li id="menui2"><a href="registration.html">Registrace</a></li></div>
             </ul>
         </div>
     </div>
@@ -162,127 +103,6 @@
 </div>
 
 
-<script type="text/javascript" charset="utf-8">
-    function showMockup(url, params) {
-        var finalUrl = url + "?";
-        if (params != null) {
-            jQuery.each(params, function (par, field) {
-                finalUrl += par + "=" + $("#" + field).val() + "&";
-            });
-        }
-        location.href = finalUrl;
-    }
 
-    $(document).ready(function () {
-
-        $("#menui1").click(function (event) {
-            showMockup('planner.html');
-            event.stopPropagation();
-            event.preventDefault();
-        });
-
-        $("#menui2").click(function (event) {
-            showMockup('registration.html');
-            event.stopPropagation();
-            event.preventDefault();
-        });
-
-
-        $("#page-title").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#img-landing-page").click(function (event) {
-            showMockup('Detailakce.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#inner-page0").click(function (event) {
-            showMockup('Detailakce.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#inner-page2").click(function (event) {
-            showMockup('Detailakce.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#btn-1").click(function (event) {
-            showMockup('Detailakce.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#btn-2").click(function (event) {
-            showMockup('Detailakce.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#btn-3").click(function (event) {
-            showMockup('Detailakce.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#passwd-field").click(function (event) {
-            event.stopPropagation();
-            event.preventDefault();
-        });
-
-        $("#nap42").click(function (event) {
-            showMockup('Hlavnístránka.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#email-label").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#passwd-label").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#email-field").click(function (event) {
-            event.stopPropagation();
-            event.preventDefault();
-        });
-
-        $("#help").click(function (event) {
-            showMockup('help.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#contact").click(function (event) {
-            showMockup('contact.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-    });
-</script>
 </body>
 </html>

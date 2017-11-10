@@ -664,20 +664,18 @@ div.napkeeTabsDivs > div h2 {
 
 body{
 	color: white;
+	background-color: #306bac;
 }
 
 #inner-page{
-	left: 5%;
-	width: 90%;
-	right: 5%;
-	height:100%;
-	margin-top: 30px;
+
 	z-index:1;
 	position: absolute;
 	-moz-border-radius:0px;
 	-webkit-border-radius:0px;
 	background-color: #306bac;
-	border-radius: 0.5%;
+	width:100%;
+	height: 100%;
 }
 
 
@@ -709,7 +707,8 @@ body{
 }
 
 .outer-slide-div{
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inner-slider-div{
@@ -726,16 +725,17 @@ body{
 }
 
 .img-landing-page {
-	height: 150px;
 }
 
 .footer{
 	display: inline;
+	padding-bottom: 20px;
 }
 .footer	div{
 	display: inline;
 	float: right;
-	margin-right: 10px;
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
 
 hr{
@@ -771,6 +771,7 @@ hr{
 	padding-top: 15px;
 	margin-top: -1px;
 	margin-left: -1px;
+	padding-bottom: -1px;
 }
 
 .nav li a {
@@ -789,4 +790,82 @@ hr{
 	color: #005580;
 	background-color: #5373ae;
 	text-decoration-color: transparent;
+}
+
+#sign-in-button {
+	vertical-align: middle;
+	width: 24px;
+}
+
+#planner {
+	width: 80%;
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+#planner h3 {
+	text-align: center;
+	color: #000;
+}
+
+#from-date-input-dp{
+    width: 180px;
+}
+
+#to-date-inputdp{
+    width: 180px;
+}
+
+#area-label, #price-label, #vzdalenost-do-label, #druh-vyletu-label,
+#adult-count-label, #kids-count-label, #difficulty-label, #student-count-label,
+#senior-count-label, #from-date-label, #to-date-label {
+	font-weight: bold;
+	color: #000000;
+	margin-left: 20px;
+	margin-right: 20px;
+    width: 100px;
+    display: inline-block;
+}
+
+.checkbox-outer{
+    font-weight: bold;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.checkbox-own {
+	color: #000000;
+	margin-left: 20px;
+	vertical-align: middle;
+    font-weight: normal;
+}
+
+.button{
+	text-align: center;
+}
+
+#plan-button{
+    background-color: #e30200;
+    height: 50px;
+    min-width: 150px;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.fieldset-class{
+    border-width: 2px;
+    border-color: #000000;
+    margin-left: 20px;
+}
+
+#search-misto-akci-planner{
+    margin-left: 20px;
+    text-align: center;
 }
