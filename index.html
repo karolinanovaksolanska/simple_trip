@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
     <link rel="stylesheet" href="css/jquery.orgchart.css">
     <link rel="stylesheet" href="css/jquery.treeview.css">
-    <script src="js/simpletripscript.js" ></script>
+
 
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -28,6 +28,7 @@
     <script src="js/jquery.orgchart.min.js"></script>
     <script src="js/jquery.treeview.min.js"></script>
     <script src="js/jquery.tagcloud.min.js"></script>
+    <script src="js/simpletripscript.js" ></script>
 
 </head>
 <body>
@@ -38,14 +39,19 @@
 
     <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
 
-    <div class="sign-in-form">
+    <div id="sign-in-form" class="sign-in-form">
         <label for="email-field" style="display: inline">E-mail</label>
         <input id="email-field" style="display: inline" type="text" value="client@example.com"
                class="napkeeRelativeComponent napkeeTextinput"/>
         <label for="passwd-field" style="display: inline">Heslo</label>
         <input id="passwd-field" style="display: inline" type="text" value="*********"
                class="napkeeRelativeComponent napkeeTextinput"/>
-        <img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/>
+        <a><img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
+
+    <div id="sign-out-form" class="sign-out-form invisible">
+        <a><img id="user-icon" src="icons/usericon.png"/></a>
+        <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
 
     <div id="menu" class="navbar-out">

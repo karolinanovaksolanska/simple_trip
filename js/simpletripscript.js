@@ -7,11 +7,15 @@ function showMockup(url, params) {
     }
     location.href = finalUrl;
 }
-$("#menui0").click(function (event) {
-    showMockup('index.html');
-    event.stopPropagation();
-    event.preventDefault();
-});
+
+var loggedIn = false;
+$(document).ready(function () {
+
+    $("#menui0").click(function (event) {
+        showMockup('index.html');
+        event.stopPropagation();
+        event.preventDefault();
+    });
     $("#menui1").click(function (event) {
         showMockup('planner.html');
         event.stopPropagation();
@@ -33,42 +37,42 @@ $("#menui0").click(function (event) {
     });
 
     $("#img-landing-page").click(function (event) {
-        showMockup('Detailakce.html');
+        showMockup('ddetalakce.html');
         event.stopPropagation();
         event.preventDefault();
 
     });
 
     $("#inner-page0").click(function (event) {
-        showMockup('Detailakce.html');
+        showMockup('detalakce.html');
         event.stopPropagation();
         event.preventDefault();
 
     });
 
     $("#inner-page2").click(function (event) {
-        showMockup('Detailakce.html');
+        showMockup('detalakce.html');
         event.stopPropagation();
         event.preventDefault();
 
     });
 
     $("#btn-1").click(function (event) {
-        showMockup('Detailakce.html');
+        showMockup('detalakce.html');
         event.stopPropagation();
         event.preventDefault();
 
     });
 
     $("#btn-2").click(function (event) {
-        showMockup('Detailakce.html');
+        showMockup('detalakce.html');
         event.stopPropagation();
         event.preventDefault();
 
     });
 
     $("#btn-3").click(function (event) {
-        showMockup('Detailakce.html');
+        showMockup('detalakce.html');
         event.stopPropagation();
         event.preventDefault();
 
@@ -118,3 +122,33 @@ $("#menui0").click(function (event) {
         event.preventDefault();
 
     });
+
+    $("#sign-in-button").click(function (event) {
+        loggedIn = true;
+        logIn();
+    })
+
+    $("#sign-out-button").click(function (event) {
+        loggedIn = false;
+        logOut();
+    })
+
+   logIn();
+
+});
+
+function logIn() {
+    if (loggedIn == true) {
+        $("#sign-in-form").toggleClass("invisible");
+        $("#sign-out-form").toggleClass("invisible");
+        $("#menui2").toggleClass("invisible");
+    }
+}
+
+function logOut() {
+    if (loggedIn == false) {
+        $("#sign-in-form").toggleClass("invisible");
+        $("#sign-out-form").toggleClass("invisible");
+        $("#menui2").toggleClass("invisible");
+    }
+}
