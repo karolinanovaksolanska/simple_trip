@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Napkee export</title>
+<head>
+    <title>Simple Trip - detail akce</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/datepicker.css">
-	<link rel="stylesheet" href="css/colorpicker.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<link rel="stylesheet" href="css/jquery.orgchart.css">
-	<link rel="stylesheet" href="css/jquery.treeview.css">
-	
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/colorpicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
 
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="js/jquery.migration.js"></script>
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.migration.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.swfobject.1-0.5.min.js"></script>
     <script src="js/swfobject.js"></script>
     <script src="js/jquery.sparkline.min.js"></script>
@@ -28,197 +28,216 @@
     <script src="js/jquery.orgchart.min.js"></script>
     <script src="js/jquery.treeview.min.js"></script>
     <script src="js/jquery.tagcloud.min.js"></script>
-	  <script src="js/simpletripscript.js" ></script>
-	
-  </head>
-  <body>
+    <script src="js/simpletripscript.js"></script>
+
+</head>
+<body>
 
 
-  <div id="inner-page" class="napkeeComponent napkeeCanvas">
-	  <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
+<div id="inner-page" class="napkeeComponent napkeeCanvas">
+    <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
 
-	  <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
+    <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
 
-	  <div id="sign-in-form" class="sign-in-form">
-		  <label for="email-field" style="display: inline">E-mail</label>
-		  <input id="email-field" style="display: inline" type="text" value="client@example.com"
-				 class="napkeeRelativeComponent napkeeTextinput"/>
-		  <label for="passwd-field" style="display: inline">Heslo</label>
-		  <input id="passwd-field" style="display: inline" type="text" value="*********"
-				 class="napkeeRelativeComponent napkeeTextinput"/>
-		  <a><img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
-	  </div>
+    <div id="sign-in-form" class="sign-in-form">
+        <label for="email-field" style="display: inline">E-mail</label>
+        <input id="email-field" style="display: inline" type="text" value="client@example.com"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <label for="passwd-field" style="display: inline">Heslo</label>
+        <input id="passwd-field" style="display: inline" type="text" value="*********"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <a><img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
 
-	  <div id="sign-out-form" class="sign-out-form invisible">
-		  <a><img id="user-icon" src="icons/usericon.png"/></a>
-		  <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
-	  </div>
+    <div id="sign-out-form" class="sign-out-form invisible">
+        <a><img id="user-icon" src="icons/usericon.png"/></a>
+        <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
 
-	  <div id="menu" class="navbar-out">
-		  <div class="navbar-in">
-			  <ul class="nav">
-				  <div><li id="menui0" class="active"><a href="index.html">Hlavní stránka</a></li></div>
-				  <div><li id="menui1"><a href="planner.html">Plánovač</a></li></div>
-				  <div><li id="menui2"><a href="registration.html">Registrace</a></li></div>
-			  </ul>
-		  </div>
-	  </div>
+    <div id="menu" class="navbar-out">
+        <div class="navbar-in">
+            <ul class="nav">
+                <div>
+                    <li id="menui0" class="active"><a href="index.html">Hlavní stránka</a></li>
+                </div>
+                <div>
+                    <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui2"><a href="registration.html">Registrace</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
 
-	  <br/>
+    <br/>
 
-	  <div class="page-title">Detail akce</div>
-<div class="inner-page">
-	  <button id="" type="button" class="itinerar-button">přidat do itineráře:</button>
+    <div class="page-title">Detail akce</div>
+    <div class="inner-page">
+        <button id="" type="button" class="itinerar-button">přidat do itineráře:</button>
 
-	  <select id="" class="napkeeRelativeComponent napkeeCombobox">
-		  <option>v&yacute;let do Prahy</option>
-		  <option>v&yacute;let ma Moravu</option>
-	  </select>
+        <select id="" class="napkeeRelativeComponent napkeeCombobox">
+            <option>v&yacute;let do Prahy</option>
+            <option>v&yacute;let ma Moravu</option>
+        </select>
 
-	  <button id="" type="button" class="itinerar-button">nov&yacute; itiner&aacute;ř</button>
+        <button id="" type="button" class="itinerar-button">nov&yacute; itiner&aacute;ř</button>
 
-	  <button id="" type="button" class="itinerar-button">přidat do obl&iacute;ben&yacute;ch</button>
+        <button id="" type="button" class="itinerar-button">přidat do obl&iacute;ben&yacute;ch</button>
 
-	  <img id="" src="js/holder.js/415x219" />
+        <img id="main_image_detail" src="js/holder.js/415x219"/>
 
-	  <img id="" src="js/holder.js/95x95" class="" />
+        <img id="" src="js/holder.js/95x95" class=""/>
 
-	  <img id="" src="js/holder.js/95x95" class="" />
-	<img id="" src="js/holder.js/95x95" class="" />
-	<img id="" src="js/holder.js/95x95" class="" />
-		<br>
-	  <h3 id="" class="">Festival Maroko rokoko za oko</h3>
+        <img id="" src="js/holder.js/95x95" class=""/>
+        <img id="" src="js/holder.js/95x95" class=""/>
+        <img id="" src="js/holder.js/95x95" class=""/>
+        <br>
+        <h3 id="akce-title" class="">Den ve Staré Praze</h3>
 
-	  <span id="" class="itinerar-label">Datum a čas:</span>
-	<br>
+        <span id="" class="itinerar-label">Datum a čas:</span>
+        <br>
 
-	  <span id="" class="itinerar-label">Adresa:</span>
-	<br>
+        <span id="" class="itinerar-label">Adresa:</span>
+        <br>
 
-	  <span id="" class="itinerar-label">Webov&aacute; str&aacute;nka: </span>
+        <span id="" class="itinerar-label">Webov&aacute; str&aacute;nka: </span>
 
-	  <img id="nap91_6" src="icons/napkee/globe.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	<br>
-	<span id="" class="itinerar-label">Hodnocen&iacute;:</span>
+        <a><img id="" src="icons/globe-icon.png" class=""/></a>
+        <br>
+        <span id="" class="itinerar-label">Hodnocen&iacute;:</span>
 
-	<img id="nap91_14" src="icons/staricon.png" class="icon-star-itinerary" />
+        <img id="nap91_14" src="icons/staricon.png" class="icon-star-itinerary"/>
 
-	<img id="nap91_15" src="icons/staricon.png" class="icon-star-itinerary" />
+        <img id="nap91_15" src="icons/staricon.png" class="icon-star-itinerary"/>
 
-	<img id="nap91_16" src="icons/staricon.png" class="icon-star-itinerary" />
+        <img id="nap91_16" src="icons/staricon.png" class="icon-star-itinerary"/>
 
-	<img id="nap91_17" src="icons/staricon.png" class="icon-star-itinerary" />
+        <img id="nap91_17" src="icons/staricon.png" class="icon-star-itinerary"/>
 
-	<img id="nap91_18" src="icons/staricon.png" class="icon-star-itinerary" />
+        <img id="nap91_18" src="icons/staricon.png" class="icon-star-itinerary"/>
 
-	<button id="nap91_19" type="button" class="itinerar-button">ohodnotit</button>
-	<br>
-	  <span id="" class="itinerar-label">Cen&iacute;k:</span>
+        <button id="nap91_19" type="button" class="itinerar-button">ohodnotit</button>
+        <br>
+        <span id="" class="itinerar-label">Cen&iacute;k:</span>
 
-	  <div id="nap91_9container" class="napkeeRelativeComponent napkeeDatagrid">
-		  <table id="nap91_9" class="table">
-			  <thead>
-			  <tr>
-				  <th class="verticalLine">Kategorie</th>
-				  <th>Cena kč</th>
-			  </tr></thead>
-			  <tbody><tr><td class="odd verticalLine">dospěl&iacute;</td><td class="odd">150</td></tr>
-			  <tr><td class="even verticalLine">studenti</td><td class="even">100</td></tr>
-			  <tr><td class="even verticalLine">děti</td><td class="even">100</td></tr>
-			  <tr><td class="even verticalLine">senioři</td><td class="even">100</td></tr>
-			  </tbody>
-		  </table>
-	  </div>
+        <div id="nap91_9container" class="napkeeRelativeComponent napkeeDatagrid">
+            <table id="nap91_9" class="table">
+                <thead>
+                <tr>
+                    <th class="verticalLine">Kategorie</th>
+                    <th>Cena kč</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="odd verticalLine">dospěl&iacute;</td>
+                    <td class="odd">150</td>
+                </tr>
+                <tr>
+                    <td class="even verticalLine">studenti</td>
+                    <td class="even">100</td>
+                </tr>
+                <tr>
+                    <td class="even verticalLine">děti</td>
+                    <td class="even">100</td>
+                </tr>
+                <tr>
+                    <td class="even verticalLine">senioři</td>
+                    <td class="even">100</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
-	  <span id="" class="itinerar-label">Popis:</span>
-	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-		aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-		Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-		dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-		sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-		magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-		suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
-		ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
-		nulla pariatur?</p>
-	<br>
-<hr>
+        <span id="" class="itinerar-label">Popis:</span>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+            sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+            suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+            ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+            nulla pariatur?</p>
+        <br>
+        <hr>
 
-	<h3>Diskuze:</h3>
-	<textarea id="text-discussion-itinerary" class=""></textarea>
+        <h3>Diskuze:</h3>
+        <textarea id="text-discussion-itinerary" class=""></textarea>
 
-	<div  id="send-discussion"><button type="button" class="itinerar-button">odeslat</button></div>
-<br>
-	<div id="nap90_12" class="napkeeRelativeComponent napkeeHrule"></div>
+        <div id="send-discussion">
+            <button type="button" class="itinerar-button">odeslat</button>
+        </div>
+        <br>
+        <div id="nap90_12" class="napkeeRelativeComponent napkeeHrule"></div>
 
-	<button id="nap90_3" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+        <button id="nap90_3" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
 
-	<div id="nap90_13" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/></div>
+        <div id="nap90_13" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/>
+        </div>
 
-	<img id="nap90_14" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
+        <img id="nap90_14" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
 
-	<div id="nap90_15" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972 23:59:59<br/></div>
-	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-		aperiam, eaque ipsa quae ab illo inventore.</p>
+        <div id="nap90_15" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972
+            23:59:59<br/></div>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore.</p>
 
-	  <button id="nap90_5" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-
-	<div id="nap90_18" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/></div>
-
-	<img id="nap90_19" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-
-	<div id="nap90_20" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972 23:00:00<br/></div>
-	<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
-		nulla pariatur?</p>
-
-	  <button id="nap90_7" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-	<div id="nap90_22" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/></div>
-
-	<img id="nap90_23" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-
-	<div id="nap90_24" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">8. 8. 1972 23:59:59<br/></div>
-
-	<p>Ut enim ad minima veniam.</p>
-	  <button id="nap90_9" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-	<div id="nap90_27" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/></div>
-
-	<img id="nap90_28" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-
-	<div id="nap90_29" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">7. 8. 1972 23:00:00<br/></div>
-	<p>Aperiel illum qui dolorem eum fugiat quo voluptas
-		nulla pariatur?</p>
+        <button id="nap90_5" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
 
 
+        <div id="nap90_18" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/>
+        </div>
+
+        <img id="nap90_19" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
+
+        <div id="nap90_20" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972
+            23:00:00<br/></div>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+            illum qui dolorem eum fugiat quo voluptas
+            nulla pariatur?</p>
+
+        <button id="nap90_7" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+
+        <div id="nap90_22" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/>
+        </div>
+
+        <img id="nap90_23" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
+
+        <div id="nap90_24" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">8. 8. 1972
+            23:59:59<br/></div>
+
+        <p>Ut enim ad minima veniam.</p>
+        <button id="nap90_9" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
+
+        <div id="nap90_27" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/>
+        </div>
+
+        <img id="nap90_28" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
+
+        <div id="nap90_29" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">7. 8. 1972
+            23:00:00<br/></div>
+        <p>Aperiel illum qui dolorem eum fugiat quo voluptas
+            nulla pariatur?</p>
 
 
-	  <div id="nap67" class="btn-group napkeeComponent napkeeButtonbar">
-		  <a class="btn" href="#" id="nap67i0">&lt;&lt;</a><a class="btn" href="#" id="nap67i1">&lt;</a><a class="btn active" href="#" id="nap67i2">1</a><a class="btn" href="#" id="nap67i5">&gt;</a><a class="btn" href="#" id="nap67i6">&gt;&gt;</a>
-	  </div>
+        <div id="button-bar-detail" class="">
+            <a class="button-bar-here" href="#" id="nap67i0">&lt;&lt;</a><a class="button-bar-here" href="#" id="nap67i1">&lt;</a><a
+                class="button-bar-here active" href="#" id="nap67i2">1</a><a class="button-bar-here" href="#" id="nap67i5">&gt;</a><a
+                class="button-bar-here" href="#" id="nap67i6">&gt;&gt;</a>
+        </div>
 
+    </div>
 
-	  <img id="nap92" src="js/holder.js/95x95" class="napkeeRelativeComponent napkeeImage" />
-	  <table border="0" id="nap92table" class="napkeeComponent napkeeImageTable" >
-		  <tr>
-			  <td align="center" valign="middle">
-				  <span id="nap92label" class="napkeeImageLabel">4</span>
-			  </td>
-		  </tr>
-	  </table>
+    <hr>
 
+    <div class="footer">
+        <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>
+        <div id="contact" class="help-contact"><a href="contact.html">Kontakt</a></div>
+    </div>
 </div>
 
-	  <hr>
 
-	  <div class="footer">
-		  <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>
-		  <div id="contact" class="help-contact"><a href="contact.html">Kontakt</a></div>
-	  </div>
-  </div>
-
-
-
-
-  </body>
+</body>
 </html>
