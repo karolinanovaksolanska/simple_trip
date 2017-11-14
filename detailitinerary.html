@@ -1,542 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Napkee export</title>
+<head>
+    <title>Simple trip - detail itineráře</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/datepicker.css">
-	<link rel="stylesheet" href="css/colorpicker.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<link rel="stylesheet" href="css/jquery.orgchart.css">
-	<link rel="stylesheet" href="css/jquery.treeview.css">
-	
-	
-	<style type="text/css">
-	#napkeeCanvas {
-		position:absolute;
-		left:0px;
-		top:0px;
-	}
-	.napkeeComponent {
-		position:absolute;
-		white-space: nowrap;
-	}
-	.napkeeRelativeComponent {
-		position:absolute;
-		white-space: nowrap;
-	}
-	
-	
-#nap1{
-	left:187px;
-	top:90px;
-	width:760px;
-	height:482px;
-	z-index:1;
-	background-color:#FFFFFF;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-	border:1px solid #000;
-	-moz-border-radius:0px;
-	-webkit-border-radius:0px;
-}
-	
-#nap2{
-	left:187px;
-	top:139px;
-	z-index:2;
-}
-#nap2.napkee{
-	width:760px;
-	height:29px;
-}
-	
-#nap3{
-	left:40px;
-	top:8px;
-	width:139px;
-	height:0px;
-	z-index:3;
-	font-size: 28px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-	color:#000000;
-}
-	
-#nap4{
-	left:205px;
-	top:8px;
-	width:109px;
-	height:33px;
-	z-index:4;
-	border:0px solid;
-}
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/colorpicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
 
-#nap4table{
-	left:392px;
-	top:98px;
-	width:109px;
-	height:33px;
-	z-index:5;
-	display:inline-table;
-}
-
-#nap4label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap5{
-	left:669px;
-	top:12px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:5;
-	border:0px solid;
-}
-	
-#nap6{
-	left:700px;
-	top:12px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:6;
-	border:0px solid;
-}
-	
-#nap9{
-	left:32px;
-	top:120px;
-	width:257px;
-	height:248px;
-	z-index:7;
-	border:0px solid;
-}
-
-#nap9table{
-	left:219px;
-	top:210px;
-	width:257px;
-	height:248px;
-	z-index:8;
-	display:none;
-}
-
-#nap9label{
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-}
-	
-#nap51_0{
-	left:596px;
-	top:149px;
-	z-index:0;
-}
-
-#nap51_0.napkee {
-	width:45px;
-	height:20px;
-	font-size: 12px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap51_1{
-	left:313px;
-	top:150px;
-	width:270px;
-	height:16px;
-	z-index:1;
-	font-size: 13px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-	white-space: normal;
-}
-	
-#nap51_2{
-	left:648px;
-	top:145px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:2;
-	border:0px solid;
-}
-	
-#nap51_3{
-	left:698px;
-	top:145px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:3;
-	border:0px solid;
-}
-	
-#nap51_4{
-	left:673px;
-	top:145px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:4;
-	border:0px solid;
-}
-	
-#nap51_5{
-	left:596px;
-	top:124px;
-	z-index:5;
-}
-
-#nap51_5.napkee {
-	width:45px;
-	height:20px;
-	font-size: 12px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap51_6{
-	left:313px;
-	top:125px;
-	width:270px;
-	height:16px;
-	z-index:6;
-	font-size: 13px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-	white-space: normal;
-}
-	
-#nap51_7{
-	left:648px;
-	top:120px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:7;
-	border:0px solid;
-}
-	
-#nap51_8{
-	left:698px;
-	top:120px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:8;
-	border:0px solid;
-}
-	
-#nap51_9{
-	left:673px;
-	top:120px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:9;
-	border:0px solid;
-}
-	
-#nap51_10{
-	left:596px;
-	top:174px;
-	z-index:10;
-}
-
-#nap51_10.napkee {
-	width:45px;
-	height:20px;
-	font-size: 12px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap51_11{
-	left:313px;
-	top:175px;
-	width:270px;
-	height:16px;
-	z-index:11;
-	font-size: 13px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-	white-space: normal;
-}
-	
-#nap51_12{
-	left:648px;
-	top:170px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:12;
-	border:0px solid;
-}
-	
-#nap51_13{
-	left:698px;
-	top:170px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:13;
-	border:0px solid;
-}
-	
-#nap51_14{
-	left:673px;
-	top:170px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:14;
-	border:0px solid;
-}
-	
-#nap51_15{
-	left:596px;
-	top:199px;
-	z-index:15;
-}
-
-#nap51_15.napkee {
-	width:45px;
-	height:20px;
-	font-size: 12px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap51_16{
-	left:313px;
-	top:200px;
-	width:270px;
-	height:35px;
-	z-index:16;
-	font-size: 13px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-	white-space: normal;
-}
-	
-#nap51_17{
-	left:648px;
-	top:195px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:17;
-	border:0px solid;
-}
-	
-#nap51_18{
-	left:698px;
-	top:195px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:18;
-	border:0px solid;
-}
-	
-#nap51_19{
-	left:673px;
-	top:195px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:19;
-	border:0px solid;
-}
-	
-#nap51_20{
-	left:596px;
-	top:234px;
-	z-index:20;
-}
-
-#nap51_20.napkee {
-	width:45px;
-	height:20px;
-	font-size: 12px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap51_21{
-	left:313px;
-	top:235px;
-	width:270px;
-	height:16px;
-	z-index:21;
-	font-size: 13px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-	white-space: normal;
-}
-	
-#nap51_22{
-	left:648px;
-	top:230px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:22;
-	border:0px solid;
-}
-	
-#nap51_23{
-	left:698px;
-	top:230px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:23;
-	border:0px solid;
-}
-	
-#nap51_24{
-	left:673px;
-	top:230px;
-	width:0px;
-	height:0px;
-	font-size:0px;
-	z-index:24;
-	border:0px solid;
-}
-	
-#nap52{
-	left:32px;
-	top:87px;
-	width:0px;
-	height:0px;
-	z-index:9;
-	font-size: 24px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:center;
-	color:#000000;
-}
-	
-#nap53{
-	left:597px;
-	top:368px;
-	z-index:10;
-}
-
-#nap53.napkee {
-	width:0px;
-	height:0px;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap54{
-	left:664px;
-	top:368px;
-	z-index:11;
-}
-
-#nap54.napkee {
-	width:0px;
-	height:0px;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-}
-
-	
-#nap55{
-	left:39px;
-	top:418px;
-	width:694px;
-	height:1px;
-	z-index:12;
-	background-color:#000000;
-	opacity:1.0;
-	filter:alpha(opacity=100);
-}
-	
-#nap56{
-	left:580px;
-	top:444px;
-	width:0px;
-	height:0px;
-	z-index:13;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-#nap57{
-	left:657px;
-	top:444px;
-	width:0px;
-	height:0px;
-	z-index:14;
-	font-size: 14px;
-	font-style:normal;
-	font-weight:normal;
-	text-decoration:none;
-	text-align:left;
-	color:#000000;
-}
-	
-	</style>
-	
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="js/jquery.migration.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.migration.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.swfobject.1-0.5.min.js"></script>
     <script src="js/swfobject.js"></script>
     <script src="js/jquery.sparkline.min.js"></script>
@@ -546,408 +27,99 @@
     <script src="js/jquery.orgchart.min.js"></script>
     <script src="js/jquery.treeview.min.js"></script>
     <script src="js/jquery.tagcloud.min.js"></script>
-	
-  </head>
-  <body>
-  
-	
+    <script src="js/simpletripscript.js"></script>
+
+</head>
+<body>
 
 
-	
-<div id="nap1" class="napkeeComponent napkeeCanvas">
-<span id="nap3" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
-	
-<img id="nap4" src="js/holder.js/109x33" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap4table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap4label" class="napkeeImageLabel">logo</span>
-		</td>
-	</tr>
-</table>
+<div id="inner-page" class="">
+    <span id="page-title" class="">Simple trip</span>
 
-	
-	<img id="nap5" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap6" src="icons/napkee/sign-out.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<img id="nap9" src="js/holder.js/257x248" class="napkeeRelativeComponent napkeeImage" />
-<table border="0" id="nap9table" class="napkeeComponent napkeeImageTable" >
-	<tr>
-		<td align="center" valign="middle">
-			<span id="nap9label" class="napkeeImageLabel"></span>
-		</td>
-	</tr>
-</table>
+    <img id="logo-image" src="images/logo.png" class=""/>
 
-	
-<button id="nap51_0" type="button" class="napkeeRelativeComponent napkeeButton btn">Detail</button>
-	
-<div id="nap51_1" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">8.30 &ndash; 10.15 &ndash; N&aacute;v&scaron;těva Karlova mostu<br/></div>
-	
-	<img id="nap51_2" src="icons/napkee/times.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_3" src="icons/napkee/caret-down.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_4" src="icons/napkee/caret-up.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<button id="nap51_5" type="button" class="napkeeRelativeComponent napkeeButton btn">Detail</button>
-	
-<div id="nap51_6" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">8.00 &ndash; 8.30 &ndash; Cesta vlakem RegioJet<br/></div>
-	
-	<img id="nap51_7" src="icons/napkee/times.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_8" src="icons/napkee/caret-down.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_9" src="icons/napkee/caret-up.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<button id="nap51_10" type="button" class="napkeeRelativeComponent napkeeButton btn">Detail</button>
-	
-<div id="nap51_11" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">10.15 &ndash; 12.00 &ndash; N&aacute;v&scaron;těva Pražsk&eacute;ho hradu<br/></div>
-	
-	<img id="nap51_12" src="icons/napkee/times.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_13" src="icons/napkee/caret-down.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_14" src="icons/napkee/caret-up.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<button id="nap51_15" type="button" class="napkeeRelativeComponent napkeeButton btn">Detail</button>
-	
-<div id="nap51_16" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">12.00 &ndash; 13.30 &ndash; Oběd v restauraci Velk&aacute; kl&aacute;&scaron;tern&iacute; restaurace<br/></div>
-	
-	<img id="nap51_17" src="icons/napkee/times.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_18" src="icons/napkee/caret-down.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_19" src="icons/napkee/caret-up.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<button id="nap51_20" type="button" class="napkeeRelativeComponent napkeeButton btn">Detail</button>
-	
-<div id="nap51_21" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">14.00 &ndash; 15.30 &ndash; N&aacute;v&scaron;těva Muzeum miniatur<br/></div>
-	
-	<img id="nap51_22" src="icons/napkee/times.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_23" src="icons/napkee/caret-down.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-	<img id="nap51_24" src="icons/napkee/caret-up.png" class="napkeeRelativeComponent napkeeIcon rotate360" />
-	
-<span id="nap52" class="napkeeRelativeComponent napkeeSubTitle">Itiner&aacute;ř</span>
-	
-<button id="nap53" type="button" class="napkeeRelativeComponent napkeeButton btn">Uložit</button>
-	
-<button id="nap54" type="button" class="napkeeRelativeComponent napkeeButton btn">Storno</button>
-	
-<div id="nap55" class="napkeeRelativeComponent napkeeHrule"></div>
-	
-<span id="nap56" class="napkeeRelativeComponent napkeeLabel ">N&aacute;pověda</span>
-	
-<span id="nap57" class="napkeeRelativeComponent napkeeLabel ">Kontakt</span>
-	</div>
-	
-<div id="nap2" class="napkeeComponent napkeeMenubar navbar">
-	<div class="navbar-inner">
-		<ul class="nav">
-			<li id="nap2i0"><a href="#">Hlavní stránka</a></li><li id="nap2i1"><a href="#">Plánovač</a></li>
-		</ul>
-	</div>
+    <div id="sign-in-form" class="sign-in-form">
+        <label for="email-field" style="display: inline">E-mail</label>
+        <input id="email-field" style="display: inline" type="text" value="client@example.com"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <label for="passwd-field" style="display: inline">Heslo</label>
+        <input id="passwd-field" style="display: inline" type="text" value="*********"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <a><img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
+
+    <div id="sign-out-form" class="sign-out-form invisible">
+        <div class="dropdown">
+            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="profile.html">Profil</a>
+                <a href="planned_trips.html">Naplánované výlety</a>
+                <a href="my_trips.html">Uskutečněné výlety</a>
+                <a href="payments.html">Platby</a>
+            </div>
+        </div>
+        <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
+
+    <div id="menu" class="navbar-out">
+        <div class="navbar-in">
+            <ul class="nav">
+                <div>
+                    <li id="menui0" class="active"><a href="index.html">Hlavní stránka</a></li>
+                </div>
+                <div>
+                    <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui2"><a href="registration.html">Registrace</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <br/>
+
+
+    <div class="inner-page">
+        <h2 class="page-title">Detail itineráře</h2>
+        <img class="main_image_detail" src="images/placeholder.jpg"/>
+        <div class="cell-block">
+            <div cellspacing="0" cellpadding="0" style="min-width: 500px">8.30 - 10.15 Návštěva Karlova mostu<br/></div>
+            <button type="button" class="itiner-button">Detail</button>
+            <br>
+
+            <div cellspacing="0" cellpadding="0" style="min-width: 500px">8.00 - 8.30 Cesta vlakem RegioJet<br/></div>
+            <button type="button" class="itiner-button">Detail</button>
+<br>
+            <div cellspacing="0" cellpadding="0" style="min-width: 500px">10.15 - 12.00 Návštěva Pražského hradu<br/></div>
+            <button type="button" class="itiner-button">Detail</button>
+<br>
+            <div cellspacing="0" cellpadding="0" style="min-width: 500px">12.00 - 13.30 Oběd v restauraci Velká klášterní restaurace<br/>
+            </div>
+            <button type="button" class="itiner-button">Detail</button>
+
+            <div cellspacing="0" cellpadding="0" style="min-width: 500px">14.00 - 15.30 Návštěva Muzeum miniatur<br/></div>
+            <button type="button" class="itiner-button">Detail</button>
+
+            <div class="button-inside">
+                <button id="nap53" type="button" class="itinerar-button">Uložit</button>
+
+                <button id="nap54" type="button" class="itinerar-button">Storno</button></div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>
+        <div id="contact" class="help-contact"><a href="contact.html">Kontakt</a></div>
+    </div>
 </div>
-	
-	
-    <script type="text/javascript" charset="utf-8">
-	    function showMockup(url,params){
-			var finalUrl = url + "?";
-			if (params!=null){
-				jQuery.each(params, function(par, field){
-					finalUrl += par + "=" + $("#"+field).val() + "&";
-				});
-			}
-			location.href = finalUrl;
-		}
-		$(document).ready(function(){
-			$(".accordion").each(function(){
-				var _acc = $(this);
-				_acc.find(".accordion-inner").height(_acc.height() - (_acc.find(".accordion-inner").length * 36));
-			});
-			$(document).on("click", function(e){
-				$("[data-date]").datepicker('show');
-			});
-		
-			
-$("#nap1").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
 
-});
-	
 
-$("#nap2").click(function(event){
-});
+</div>
 
-$("#nap2i0").click(function(event){
-	showMockup('Hlavnístránka.html');
-	event.stopPropagation();
-	event.preventDefault();
 
-});
-
-$("#nap2i1").click(function(event){
-	showMockup('Plánovač.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-
-$("#nap2i2").click(function(event){
-});
-
-	
-$("#nap3").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap4").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap5").click(function(event){
-	showMockup('Detailitinerářesmenu.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap6").click(function(event){
-	showMockup('Kontakt.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap9").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_0").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_1").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_2").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_3").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_4").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_5").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_6").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_7").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_8").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_9").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_10").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_11").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_12").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_13").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_14").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_15").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_16").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_17").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_18").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_19").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_20").click(function(event){
-	showMockup('Detailakce.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_21").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_22").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_23").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap51_24").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap52").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap53").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap54").click(function(event){
-	
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap56").click(function(event){
-	showMockup('Nápověda.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-$("#nap57").click(function(event){
-	showMockup('Kontakt.html');
-	event.stopPropagation();
-	event.preventDefault();
-
-});
-	
-		});
-	</script>
-  </body>
+</body>
 </html>

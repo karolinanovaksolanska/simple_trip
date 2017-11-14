@@ -733,6 +733,43 @@ body a {
     border-color: transparent;
 }
 
+.inner-slider-my-div{
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: solid;
+}
+
+.inner-slider-my-div img{
+    display: inline-block;
+}
+
+
+.outer-recomended-slide-div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner-recomended-slider-div{
+    display: inline-block;
+    text-align: center;
+    width: 27%;
+    margin-top: 30px;
+    border: dotted;
+    border-radius: 3%;
+}
+
+.inner-recomended-slider-div img{
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    border-width: 0px;
+    border: hidden;
+    border-color: transparent;
+}
+
 .page-title {
 	margin-left: 10px;
 	font-size: 18px;
@@ -780,13 +817,13 @@ hr{
 	color: white;
 	font-size: 20px;
 	vertical-align: middle;
-	min-height: 45px;
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 15px;
 	margin-top: -1px;
 	margin-left: -1px;
 	padding-bottom: -1px;
+    min-height: 37px;
 }
 
 .nav li a {
@@ -822,16 +859,17 @@ hr{
     width: 24px;
 }
 
-#planner, #registration {
+#planner, #registration, .registration{
 	width: 80%;
 	background-color: #FFFFFF;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 10px;
 	padding: 10px;
+    color: black;
 }
 
-#planner h3, #registration h3 {
+#planner h3, #registration h3, .registration h3 {
 	text-align: center;
 	color: #000;
     margin-bottom: 20px;
@@ -847,7 +885,7 @@ hr{
 
 #area-label, #price-label, #vzdalenost-do-label, #druh-vyletu-label,
 #adult-count-label, #kids-count-label, #difficulty-label, #student-count-label,
-#senior-count-label, #from-date-label, #to-date-label {
+#senior-count-label, #from-date-label, #to-date-label, #email-label, .form-label {
 	font-weight: bold;
 	color: #000000;
 	margin-left: 20px;
@@ -967,6 +1005,20 @@ hr{
     margin-top: 20px;
 }
 
+.itiner-button{
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    color: white;
+    background-color: #2c4574;
+    min-height: 30px;
+    min-width: 100px;
+    border: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
 .itinerar-label{
     font-weight: 600;
     font-size: 16px;
@@ -1007,4 +1059,55 @@ hr{
 
 .active{
 	background-color: #486FBE;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: -150px;
+    background-color: #486FBE;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.button-inside{
+    text-align: center;
+}
+
+.checkbox-group{
+    margin-left: 20px;
+}
+
+.main_image_detail{
+    max-width: 300px;
+    float: left;
+    margin-right: 25px;
+}
+
+.cell-block{
+    margin-left: 20px;
+}
+
+.cell-block div {
+    display: inline-block;
 }

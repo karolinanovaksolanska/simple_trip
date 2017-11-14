@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Simple trip - Kontakt</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/datepicker.css">
-	<link rel="stylesheet" href="css/colorpicker.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
-	<link rel="stylesheet" href="css/jquery.orgchart.css">
-	<link rel="stylesheet" href="css/jquery.treeview.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/colorpicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
 
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-	<script src="js/jquery.migration.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.migration.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/jquery.swfobject.1-0.5.min.js"></script>
     <script src="js/swfobject.js"></script>
     <script src="js/jquery.sparkline.min.js"></script>
@@ -27,70 +27,81 @@
     <script src="js/jquery.orgchart.min.js"></script>
     <script src="js/jquery.treeview.min.js"></script>
     <script src="js/jquery.tagcloud.min.js"></script>
+    <script src="js/simpletripscript.js"></script>
 
-  </head>
-  <body>
+</head>
+<body>
 
-  <div id="inner-page" class="napkeeComponent napkeeCanvas">
-	  <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
+<div id="inner-page" class="napkeeComponent napkeeCanvas">
+    <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
 
-	  <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
+    <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
 
-	  <div class="sign-in-form">
-		  <label for="email-field" style="display: inline">E-mail</label>
-		  <input id="email-field" style="display: inline" type="text" value="client@example.com"
-				 class="napkeeRelativeComponent napkeeTextinput"/>
-		  <label for="passwd-field" style="display: inline">Heslo</label>
-		  <input id="passwd-field" style="display: inline" type="text" value="*********"
-				 class="napkeeRelativeComponent napkeeTextinput"/>
-		  <img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/>
-	  </div>
+    <div id="sign-in-form" class="sign-in-form">
+        <label for="email-field" style="display: inline">E-mail</label>
+        <input id="email-field" style="display: inline" type="text" value="client@example.com"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <label for="passwd-field" style="display: inline">Heslo</label>
+        <input id="passwd-field" style="display: inline" type="text" value="*********"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <a><img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
 
-      <div id="sign-out-form" class="sign-out-form invisible">
-          <a><img id="user-icon" src="icons/usericon.png"/></a>
-          <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
-      </div>
+    <div id="sign-out-form" class="sign-out-form invisible">
+        <div class="dropdown">
+            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="profile.html">Profil</a>
+                <a href="planned_trips.html">Naplánované výlety</a>
+                <a href="my_trips.html">Uskutečněné výlety</a>
+                <a href="payments.html">Platby</a>
+            </div>
+        </div>
+        <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
+    </div>
 
-	  <div id="menu" class="navbar-out">
-		  <div class="navbar-in">
-			  <ul class="nav">
-				  <div><a href="index.html">
-					  <li id="menui0" class="active">Hlavní stránka</li>
-				  </div>
-				  <div>
-					  <li id="menui1"><a href="planner.html">Plánovač</a></li>
-				  </div>
-				  <div>
-					  <li id="menui2"><a href="registration.html">Registrace</a></li>
-				  </div>
-			  </ul>
-		  </div>
-	  </div>
+    <div id="menu" class="navbar-out">
+        <div class="navbar-in">
+            <ul class="nav">
+                <div><a href="index.html">
+                    <li id="menui0" class="active">Hlavní stránka</li>
+                </div>
+                <div>
+                    <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui2"><a href="registration.html">Registrace</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
 
-	  <fieldset id="registration">
-		  <h3>Kontaktní formulář</h3>
-		  <form id="contact-form">
-			  <span class="contact-form">Jméno a Příjmení</span>
-			  <input class="contact-form-input" type="text" value="Jan Novák" />
-				<br>
-			  <span class="contact-form">E&ndash;mail</span>
-			  <input class="contact-form-input" type="text" value="client@example.com"  />
-			  <br>
-			  <span class="contact-form">Zpráva</span>
-			  <textarea id="contact-text-box" class="">Dobrý den, Nefunguje mi přihlášení.S pozdravem, Novák</textarea>
+    <fieldset id="registration">
+        <h3>Kontaktní formulář</h3>
+        <form id="contact-form">
+            <span class="contact-form">Jméno a Příjmení</span>
+            <input class="contact-form-input" type="text" value="Jan Novák"/>
+            <br>
+            <span class="contact-form">E&ndash;mail</span>
+            <input class="contact-form-input" type="text" value="client@example.com"/>
+            <br>
+            <span class="contact-form">Zpráva</span>
+            <textarea id="contact-text-box" class="">Dobrý den, Nefunguje mi přihlášení.S pozdravem, Novák</textarea>
 
-			  <div class="button"><button id="contact-button" type="button" class="">Odeslat</button></div>
+            <div class="button">
+                <button id="contact-button" type="button" class="">Odeslat</button>
+            </div>
 
-		  </form>
-	  </fieldset>
+        </form>
+    </fieldset>
 
-	  <hr>
+    <hr>
 
-	  <div class="footer">
-		  <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>
-		  <div id="contact" class="help-contact"><a href="contact.html">Kontakt</a></div>
-	  </div>
-  </div>
+    <div class="footer">
+        <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>
+        <div id="contact" class="help-contact"><a href="contact.html">Kontakt</a></div>
+    </div>
+</div>
 
-  </body>
+</body>
 </html>

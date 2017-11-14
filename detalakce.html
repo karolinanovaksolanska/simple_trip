@@ -34,10 +34,10 @@
 <body>
 
 
-<div id="inner-page" class="napkeeComponent napkeeCanvas">
-    <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
+<div id="inner-page" class="">
+    <span id="page-title" class="">Simple trip</span>
 
-    <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
+    <img id="logo-image" src="images/logo.png" class=""/>
 
     <div id="sign-in-form" class="sign-in-form">
         <label for="email-field" style="display: inline">E-mail</label>
@@ -50,10 +50,17 @@
     </div>
 
     <div id="sign-out-form" class="sign-out-form invisible">
-        <a><img id="user-icon" src="icons/usericon.png"/></a>
+        <div class="dropdown">
+            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="profile.html">Profil</a>
+                <a href="planned_trips.html">Naplánované výlety</a>
+                <a href="my_trips.html">Uskutečněné výlety</a>
+                <a href="payments.html">Platby</a>
+            </div>
+        </div>
         <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
-
     <div id="menu" class="navbar-out">
         <div class="navbar-in">
             <ul class="nav">
@@ -77,21 +84,21 @@
         <button id="" type="button" class="itinerar-button">přidat do itineráře:</button>
 
         <select id="" class="napkeeRelativeComponent napkeeCombobox">
-            <option>v&yacute;let do Prahy</option>
-            <option>v&yacute;let ma Moravu</option>
+            <option>výlet do Prahy</option>
+            <option>výlet ma Moravu</option>
         </select>
 
-        <button id="" type="button" class="itinerar-button">nov&yacute; itiner&aacute;ř</button>
+        <button id="" type="button" class="itinerar-button">nový; itinerář</button>
 
-        <button id="" type="button" class="itinerar-button">přidat do obl&iacute;ben&yacute;ch</button>
+        <button id="" type="button" class="itinerar-button">přidat do oblíbených</button>
 
-        <img id="main_image_detail" src="js/holder.js/415x219"/>
+        <img class="main_image_detail" src="images/placeholder.jpg"/>
 
-        <img id="" src="js/holder.js/95x95" class=""/>
+        <img id="image1_detail" src="js/holder.js/95x95" class=""/>
 
-        <img id="" src="js/holder.js/95x95" class=""/>
-        <img id="" src="js/holder.js/95x95" class=""/>
-        <img id="" src="js/holder.js/95x95" class=""/>
+        <img id="image2_detail" src="js/holder.js/95x95" class=""/>
+        <img id="image3_detail" src="js/holder.js/95x95" class=""/>
+        <img id="image4_detail" src="js/holder.js/95x95" class=""/>
         <br>
         <h3 id="akce-title" class="">Den ve Staré Praze</h3>
 
@@ -119,7 +126,7 @@
 
         <button id="nap91_19" type="button" class="itinerar-button">ohodnotit</button>
         <br>
-        <span id="" class="itinerar-label">Cen&iacute;k:</span>
+        <span id="" class="itinerar-label">Ceník</span>
 
         <div id="nap91_9container" class="napkeeRelativeComponent napkeeDatagrid">
             <table id="nap91_9" class="table">
@@ -131,7 +138,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td class="odd verticalLine">dospěl&iacute;</td>
+                    <td class="odd verticalLine">dospělí</td>
                     <td class="odd">150</td>
                 </tr>
                 <tr>
@@ -170,7 +177,6 @@
             <button type="button" class="itinerar-button">odeslat</button>
         </div>
         <br>
-        <div id="nap90_12" class="napkeeRelativeComponent napkeeHrule"></div>
 
         <button id="nap90_3" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
 
@@ -200,7 +206,7 @@
 
         <button id="nap90_7" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
 
-        <div id="nap90_22" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/>
+        <div id="nap90_22" class="" cellspacing="0" cellpadding="0">Aleshek<br/>
         </div>
 
         <img id="nap90_23" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
