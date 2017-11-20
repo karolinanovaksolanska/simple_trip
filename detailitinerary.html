@@ -33,11 +33,11 @@
 <body>
 
 
-<div id="inner-page" class="">
-    <span id="page-title" class="">Simple trip</span>
-
-    <img id="logo-image" src="images/logo.png" class=""/>
-
+<div id="inner-page">
+    <a id="page-title" href="index.html" class="main-page-go">
+        Simple trip
+        <img id="logo-image" src="images/logo.png" class=""/>
+    </a>
     <div id="sign-in-form" class="sign-in-form">
         <label for="email-field" style="display: inline">E-mail</label>
         <input id="email-field" style="display: inline" type="text" value="client@example.com"
@@ -49,15 +49,6 @@
     </div>
 
     <div id="sign-out-form" class="sign-out-form invisible">
-        <div class="dropdown">
-            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="profile.html">Profil</a>
-                <a href="planned_trips.html">Naplánované výlety</a>
-                <a href="my_trips.html">Uskutečněné výlety</a>
-                <a href="payments.html">Platby</a>
-            </div>
-        </div>
         <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
 
@@ -65,10 +56,19 @@
         <div class="navbar-in">
             <ul class="nav">
                 <div>
-                    <li id="menui0" class="active"><a href="index.html">Hlavní stránka</a></li>
+                    <li id="menui0"><a href="#">Hlavní stránka</a></li>
                 </div>
                 <div>
                     <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui3" class="invisible"><a href="profile.html">Profil</a></li>
+                </div>
+                <div>
+                    <li id="menui4" class="invisible"><a href="my_trips.html">Moje výlety</a></li>
+                </div>
+                <div>
+                    <li id="menui5" class="invisible"><a href="payments.html">Platby</a></li>
                 </div>
                 <div>
                     <li id="menui2"><a href="registration.html">Registrace</a></li>
@@ -81,28 +81,27 @@
 
 
     <div class="inner-page">
-        <h2 class="page-title">Detail itineráře</h2>
-        <img class="main_image_detail" src="images/placeholder.jpg"/>
+        <h2 id="itinerary-title">Detail itineráře</h2>
+        <img id="itinerary-main-image" class="main_image_detail" src="images/prague.jpg"/>
         <div class="cell-block">
-            <div cellspacing="0" cellpadding="0" style="min-width: 500px">8.30 - 10.15 Návštěva Karlova mostu<br/></div>
+            <div id="akce1" cellspacing="0" cellpadding="0" style="min-width: 400px">8.30 - 10.15 Návštěva Karlova mostu<br/></div>
             <button type="button" class="itiner-button">Detail</button>
-            <br>
 
-            <div cellspacing="0" cellpadding="0" style="min-width: 500px">8.00 - 8.30 Cesta vlakem RegioJet<br/></div>
+            <div id="akce2" cellspacing="0" cellpadding="0" style="min-width: 400px">8.00 - 8.30 Cesta vlakem RegioJet<br/></div>
             <button type="button" class="itiner-button">Detail</button>
-<br>
-            <div cellspacing="0" cellpadding="0" style="min-width: 500px">10.15 - 12.00 Návštěva Pražského hradu<br/></div>
+
+            <div id="akce3" cellspacing="0" cellpadding="0" style="min-width: 400px">10.15 - 12.00 Návštěva Pražského hradu<br/></div>
             <button type="button" class="itiner-button">Detail</button>
-<br>
-            <div cellspacing="0" cellpadding="0" style="min-width: 500px">12.00 - 13.30 Oběd v restauraci Velká klášterní restaurace<br/>
+
+            <div id="akce4" cellspacing="0" cellpadding="0" style="min-width: 400px">12.00 - 13.30 Oběd v restauraci Velká klášterní restaurace<br/>
             </div>
             <button type="button" class="itiner-button">Detail</button>
 
-            <div cellspacing="0" cellpadding="0" style="min-width: 500px">14.00 - 15.30 Návštěva Muzeum miniatur<br/></div>
+            <div id="akce5" cellspacing="0" cellpadding="0" style="min-width: 400px">14.00 - 15.30 Návštěva Muzeum miniatur<br/></div>
             <button type="button" class="itiner-button">Detail</button>
 
             <div class="button-inside">
-                <button id="nap53" type="button" class="itinerar-button">Uložit</button>
+                <button id="nap53" onclick="toMyTrips()" type="button" class="itinerar-button">Uložit</button>
 
                 <button id="nap54" type="button" class="itinerar-button">Storno</button></div>
         </div>

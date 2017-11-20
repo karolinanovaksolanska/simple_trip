@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Napkee export</title>
+    <title>Simple trip - platby</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -33,284 +33,139 @@
 <body>
 
 
-<div id="nap1" class="napkeeComponent napkeeCanvas">
-    <span id="nap3" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
-
-    <img id="nap4" src="js/holder.js/109x33" class="napkeeRelativeComponent napkeeImage"/>
-    <table border="0" id="nap4table" class="napkeeComponent napkeeImageTable">
-        <tr>
-            <td align="center" valign="middle">
-                <span id="nap4label" class="napkeeImageLabel">logo</span>
-            </td>
-        </tr>
-    </table>
-
-
-    <img id="nap5" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
-
-    <img id="nap6" src="icons/napkee/sign-out.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
-
-    <div id="nap8" class="napkeeRelativeComponent napkeeHrule"></div>
-
-    <span id="nap9" class="napkeeRelativeComponent napkeeSubTitle">Vybran&eacute; k zaplacen&iacute;</span>
-
-    <div id="nap10container" class="napkeeRelativeComponent napkeeDatagrid">
-        <table id="nap10" class="table">
-            <thead>
-            <tr>
-                <th class="verticalLine">Itiner&aacute;ř</th>
-                <th class="verticalLine">Subjekt</th>
-                <th class="verticalLine">Cena</th>
-                <th class="verticalLine">Popis</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="odd verticalLine"><u><font color=&quot;#085394&quot;>V&yacute;let do Prahy</font></u>(Detail
-                    itiner&aacute;ře)
-                </td>
-                <td class="odd verticalLine">Karl&scaron;tejn</td>
-                <td class="odd verticalLine">400</td>
-                <td class="odd verticalLine">2x dospěl&yacute;<br/>1x d&iacute;tě</td>
-                <td class="odd"></td>
-            </tr>
-            <tr>
-                <td class="even verticalLine"><u><font color=&quot;#085394&quot;>Budějky</font></u>(Detail itiner&aacute;ře)
-                </td>
-                <td class="even verticalLine">Pivovar Budvar</td>
-                <td class="even verticalLine">150</td>
-                <td class="even verticalLine">2x dospěl&yacute;</td>
-                <td class="even"></td>
-            </tr>
-            <tr>
-                <td class="odd verticalLine"><u><font color=&quot;#085394&quot;>V&yacute;let do Prahy</font></u>(Detail
-                    itiner&aacute;ře)
-                </td>
-                <td class="odd verticalLine">vlak Telč &ndash;&gt; Praha</td>
-                <td class="odd verticalLine">500</td>
-                <td class="odd verticalLine">2x dospěl&yacute;<br/>1x d&iacute;tě</td>
-                <td class="odd"></td>
-            </tr>
-            </tbody>
-        </table>
+<div id="inner-page">
+    <a id="page-title" href="index.html" class="main-page-go">
+        Simple trip
+        <img id="logo-image" src="images/logo.png" class=""/>
+    </a>
+    <div id="sign-in-form" class="sign-in-form">
+        <label for="email-field" style="display: inline">E-mail</label>
+        <input id="email-field" style="display: inline" type="text" value="client@example.com"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <label for="passwd-field" style="display: inline">Heslo</label>
+        <input id="passwd-field" style="display: inline" type="text" value="*********"
+               class="napkeeRelativeComponent napkeeTextinput"/>
+        <a><img id="sign-in-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
 
-    <button id="nap12" type="button" class="napkeeRelativeComponent napkeeButton btn">zaplatit</button>
-
-    <button id="nap13" type="button" class="napkeeRelativeComponent napkeeButton btn">zaplatit</button>
-
-    <button id="nap14" type="button" class="napkeeRelativeComponent napkeeButton btn">k obchodn&iacute;kovi</button>
-
-    <button id="nap15" type="button" class="napkeeRelativeComponent napkeeButton btn">zru&scaron;it</button>
-
-    <button id="nap16" type="button" class="napkeeRelativeComponent napkeeButton btn">zru&scaron;it</button>
-
-    <button id="nap17" type="button" class="napkeeRelativeComponent napkeeButton btn">zru&scaron;it</button>
-
-    <div id="nap18" class="napkeeRelativeComponent napkeeHrule"></div>
-
-    <span id="nap19" class="napkeeRelativeComponent napkeeSubTitle">Ned&aacute;vno placen&eacute;</span>
-
-    <div id="nap20container" class="napkeeRelativeComponent napkeeDatagrid">
-        <table id="nap20" class="table">
-            <thead>
-            <tr>
-                <th class="verticalLine">Itiner&aacute;ř</th>
-                <th class="verticalLine">Subjekt</th>
-                <th class="verticalLine">Cena</th>
-                <th>Popis</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="odd verticalLine"><u><font color=&quot;#085394&quot;>V&yacute;let do Prahy</font></u>(Detail
-                    itiner&aacute;ře)
-                </td>
-                <td class="odd verticalLine">Karolinum</td>
-                <td class="odd verticalLine">220</td>
-                <td class="odd">2x dospěl&yacute;<br/>1x d&iacute;tě</td>
-            </tr>
-            <tr>
-                <td class="even verticalLine"><u><font color=&quot;#085394&quot;>V&yacute;let do Prahy</font></u>(Detail
-                    itiner&aacute;ře)
-                </td>
-                <td class="even verticalLine">vlak Praha &ndash;&gt; Telč</td>
-                <td class="even verticalLine">500</td>
-                <td class="even">2x dospěl&yacute;<br/>1x d&iacute;tě</td>
-            </tr>
-            </tbody>
-        </table>
+    <div id="sign-out-form" class="sign-out-form invisible">
+        <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
 
-    <div id="nap21" class="napkeeRelativeComponent napkeeHrule"></div>
+    <div id="menu" class="navbar-out">
+        <div class="navbar-in">
+            <ul class="nav">
+                <div>
+                    <li id="menui0"><a href="#">Hlavní stránka</a></li>
+                </div>
+                <div>
+                    <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui3" class="invisible"><a href="profile.html">Profil</a></li>
+                </div>
+                <div>
+                    <li id="menui4" class="invisible"><a href="my_trips.html">Moje výlety</a></li>
+                </div>
+                <div>
+                    <li id="menui5" class="invisible active"><a href="payments.html">Platby</a></li>
+                </div>
+                <div>
+                    <li id="menui2"><a href="registration.html">Registrace</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
 
-    <span id="nap22" class="napkeeRelativeComponent napkeeLabel ">N&aacute;pověda</span>
+    <br/>
 
-    <span id="nap23" class="napkeeRelativeComponent napkeeLabel ">Kontakt</span>
+
+
+    <div class="inner-page">
+        <h3>Vybrané k zaplacení</h3>
+
+        <div id="nap10container" class="napkeeRelativeComponent napkeeDatagrid">
+            <table id="nap10" class="table">
+                <thead>
+                <tr>
+                    <th class="">Itiner&aacute;ř</th>
+                    <th class="">Subjekt</th>
+                    <th class="">Cena</th>
+                    <th class="">Popis</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="">V&yacute;let do Prahy
+                    </td>
+                    <td >Karl&scaron;tejn</td>
+                    <td >400</td>
+                    <td >2x dospěl&yacute;<br/>1x d&iacute;tě</td>
+                    <td ><button id="" type="button" class="itinerar-button">zaplatit</button>
+                        <button id="" type="button" class="itinerar-button">zru&scaron;it</button>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Zvířata Praha
+                    </td>
+                    <td>Zoo Praha</td>
+                    <td >700</td>
+                    <td >2x dospěl&yacute; + 3x děti</td>
+                    <td ><button id="" type="button" class="itinerar-button">zaplatit</button>
+                        <button id="" type="button" class="itinerar-button">zru&scaron;it</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td >V&yacute;let do Prahy
+                    </td>
+                    <td >vlak Telč &ndash;&gt; Praha</td>
+                    <td>500</td>
+                    <td >2x dospěl&yacute;<br/>1x d&iacute;tě</td>
+                    <td><button id="" type="button" onclick="window.location='http://www.cd.cz/'" class="itinerar-button" >k obchodn&iacute;kovi</button>
+                        <button id="" type="button" class="itinerar-button">zru&scaron;it</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3>Ned&aacute;vno placen&eacute;</h3>
+
+            <div id="nap20container" class="napkeeRelativeComponent napkeeDatagrid">
+                <table id="nap20" class="table">
+                    <thead>
+                    <tr>
+                        <th>Itiner&aacute;ř</th>
+                        <th >Subjekt</th>
+                        <th >Cena</th>
+                        <th>Popis</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class=>V&yacute;let do Prahy
+                        </td>
+                        <td >Karolinum</td>
+                        <td >220</td>
+                        <td >2x dospěl&yacute;<br/>1x d&iacute;tě</td>
+                    </tr>
+                    <tr>
+                        <td>V&yacute;let do Prahy
+                        </td>
+                        <td >vlak Praha &ndash;&gt; Telč</td>
+                        <td>500</td>
+                        <td >2x dospěl&yacute;<br/>1x d&iacute;tě</td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+
+
+        </div>
+    </div>
 </div>
 
-<div id="nap2" class="napkeeComponent napkeeMenubar navbar">
-    <div class="navbar-inner">
-        <ul class="nav">
-            <li id="nap2i0"><a href="#">Hlavní stránka</a></li>
-            <li id="nap2i1"><a href="#">Plánovač</a></li>
-        </ul>
-    </div>
-</div>
 
-
-<script type="text/javascript" charset="utf-8">
-    function showMockup(url, params) {
-        var finalUrl = url + "?";
-        if (params != null) {
-            jQuery.each(params, function (par, field) {
-                finalUrl += par + "=" + $("#" + field).val() + "&";
-            });
-        }
-        location.href = finalUrl;
-    }
-
-    $(document).ready(function () {
-        $(".accordion").each(function () {
-            var _acc = $(this);
-            _acc.find(".accordion-inner").height(_acc.height() - (_acc.find(".accordion-inner").length * 36));
-        });
-        $(document).on("click", function (e) {
-            $("[data-date]").datepicker('show');
-        });
-
-
-        $("#nap1").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-
-        $("#nap2").click(function (event) {
-        });
-
-        $("#nap2i0").click(function (event) {
-            showMockup('Hlavnístránka.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap2i1").click(function (event) {
-            showMockup('Plánovač.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap2i2").click(function (event) {
-        });
-
-
-        $("#nap3").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap4").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap5").click(function (event) {
-            showMockup('Platbysmenu.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap6").click(function (event) {
-            showMockup('Kontakt.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap9").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-
-        $("#nap12").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap13").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap14").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap15").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap16").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap17").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap19").click(function (event) {
-
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-
-        $("#nap22").click(function (event) {
-            showMockup('Nápověda.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-        $("#nap23").click(function (event) {
-            showMockup('Kontakt.html');
-            event.stopPropagation();
-            event.preventDefault();
-
-        });
-
-    });
-</script>
 </body>
 </html>

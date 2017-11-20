@@ -33,11 +33,11 @@
 <body>
 
 
-<div id="inner-page" class="napkeeComponent napkeeCanvas">
-    <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
-
-    <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
-
+<div id="inner-page">
+    <a id="page-title" href="index.html" class="main-page-go">
+        Simple trip
+        <img id="logo-image" src="images/logo.png" class=""/>
+    </a>
     <div id="sign-in-form" class="sign-in-form">
         <label for="email-field" style="display: inline">E-mail</label>
         <input id="email-field" style="display: inline" type="text" value="client@example.com"
@@ -49,15 +49,6 @@
     </div>
 
     <div id="sign-out-form" class="sign-out-form invisible">
-        <div class="dropdown">
-            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="profile.html">Profil</a>
-                <a href="planned_trips.html">Naplánované výlety</a>
-                <a href="my_trips.html">Uskutečněné výlety</a>
-                <a href="payments.html">Platby</a>
-            </div>
-        </div>
         <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
 
@@ -65,10 +56,19 @@
         <div class="navbar-in">
             <ul class="nav">
                 <div>
-                    <li id="menui0" class="active"><a href="#">Hlavní stránka</a></li>
+                    <li id="menui0"><a href="#">Hlavní stránka</a></li>
                 </div>
                 <div>
                     <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui3" class="invisible"><a href="profile.html">Profil</a></li>
+                </div>
+                <div>
+                    <li id="menui4" class="invisible active"><a href="my_trips.html">Moje výlety</a></li>
+                </div>
+                <div>
+                    <li id="menui5" class="invisible"><a href="payments.html">Platby</a></li>
                 </div>
                 <div>
                     <li id="menui2"><a href="registration.html">Registrace</a></li>
@@ -85,21 +85,21 @@
                 <p>
                     <img class="img-landing-page" src="images/prague.jpg" class=""/>
                     <br/>
-                    <b>Den ve Staré Praze</b><br/><br/>Praha<br/><span style="font-weight: 600; color: greenyellow">Zaplaceno</span>
+                    <b>Den ve Staré Praze</b><br/><br/>Praha<br/>800 Kč / os
                     <br/>
                     <button id="btn-plan-1" type="button" class="itinerar-button" onclick="itineraryDetail('praha')">
                         detail
                     </button>
+                    <button id="btn-plan-11" onclick="toPay()" type="button" class="itinerar-button">zaplatit</button>
                 </p>
             </div>
             <div id="slide-plan2" class="inner-slider-my-div">
             <p>
                 <img class="img-landing-page" src="images/krumlov.jpg" class=""/>
                 <br/>
-                <b>Dracula premiéra</b><br/>19. 6. 2001<br/>Český Krumlov<br/>300kč / os.
+                <b>Dracula premiéra</b><br/>19. 6. 2001<br/>Český Krumlov<br/><span style="font-weight: 600; color: greenyellow">Zaplaceno</span>
                 <br/>
                 <button id="btn-plan-2" type="button" onclick="dataDetail('krumlov')" class="itinerar-button">detail</button>
-                <button id="btn-plan-21" type="button" class="itinerar-button">zaplatit</button>
             </p>
         </div>
         </div>

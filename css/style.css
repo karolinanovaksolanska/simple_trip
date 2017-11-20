@@ -274,189 +274,6 @@
 	border:0px;
 }
 
-.napkeeImage {
-}
-
-.napkeeImageLabel {
-	opacity:0.7;
-	filter:alpha(opacity=70);
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	padding:2px;
-	background-color:#FFF;
-}
-
-.napkeeIphone {
-}
-
-.napkeeIphoneKeyboard {
-}
-
-.napkeeIPhoneMenu {
-	border:1px solid #CCCCCC;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-}
-	
-.napkeeIPhoneMenu table {
-	height:28px;
-	width:100%;
-	border-bottom:1px solid #BBBBBB;
-}
-
-.napkeeIPhoneMenu table.lastTable {
-	border-bottom:0px;
-}
-
-.napkeeIPhoneMenu table td.emptyRow {
-}
-
-.napkeeIPhoneMenu table td.menuIcon {
-	width:20px;
-}
-
-.napkeeIPhoneMenu table td.menuBigIcon {
-	width:48px;
-	height:48px;
-}
-
-.napkeeIPhoneMenu table td.rowDesc {
-	width:20px;
-	font-size:11px;
-	color:#4F5B75;
-}
-
-.napkeeIPhoneMenu table td.menuSwitch {
-	width:20px;
-}
-
-.napkeeIphonePicker {
-	background: #333 url(../images/iphone/pickerBackground.png) repeat-x;
-	width:232px;
-	height:160px;
-}
-
-.napkeeIphonePicker table {
-	background: #FFF url(../images/iphone/pickerDataBackground.png) repeat-x;
-	margin-top:10px;
-	height:140px;
-}
-
-.napkeeIphonePicker table td {
-	height:28px;
-	text-align:center;
-	padding-left:10px;
-	padding-right:10px;
-}
-
-.napkeeIphonePicker table tr.selected {
-	background: #EEE url(../images/iphone/pickerSelectedRow.png) repeat-x;
-}
-
-.napkeeLabel {
-	white-space:normal;
-}
-
-.napkeeLabelUp {
-	-webkit-transform: rotate(-90deg); 
-	-moz-transform: rotate(-90deg);
-	-o-transform:rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);	
-}
-
-.napkeeLabelDown {
-	-webkit-transform: rotate(90deg); 
-	-moz-transform: rotate(90deg);
-	-o-transform:rotate(90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);	
-}
-
-.napkeeLabelSlanted {
-	-webkit-transform: rotate(-15deg); 
-	-moz-transform: rotate(-15deg);
-	-o-transform:rotate(-15deg);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.96592583, M12=0.25881905, M21=-0.25881905, M22=0.96592583,sizingMethod='auto expand')";
-	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.96592583, M12=0.25881905, M21=-0.25881905, M22=0.96592583,sizingMethod='auto expand');	
-}
-
-.napkeeLinechart {
-}
-
-.napkeeLink {
-}
-
-.napkeeLinkbar {
-	margin:0;
-	padding:0;
-}
-
-.napkeeLinkbar li {
-	display: inline;
-	list-style-type: none;
-	padding-right: 11px;
-	padding-left: 11px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-
-.napkeeLinkbar li.linkbarBorder {
-	border-right:1px solid #000;
-}
-.napkeeLinkbar li.linkbarStart {
-	padding-left: 0px;
-}
-.napkeeLinkbar li.linkbarEnd {
-	padding-right: 0px;
-}
-
-.napkeeList {
-}
-
-.napkeeMap {
-	border:1px solid #FFFFFF;
-}
-
-.napkeeModalscreen {
-}
-
-.napkeeMultilineButton.napkee {
-	border:1px solid #000000;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-	text-align:center;
-}
-
-.napkeeMultilineButton h3 {
-	margin-top:5px;
-	margin-bottom:5px;
-	font-size:16px;
-	text-align:center;
-}
-
-.napkeeMultilineButton h5 {
-	margin-top:5px;
-	margin-bottom:5px;
-	font-size:12px;
-	font-weight:normal;
-	text-align:center;
-}
-
-.napkeeParagraph li {
-	margin-left:2em;
-}
-
-.napkeePointyButton {
-	cursor:pointer;
-}
-
-.napkeeRoundbutton {
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
-}
-
 .napkeeSearchbox {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -698,9 +515,11 @@ body a {
 	font-size: 14px;
 }
 
-#page-title{
+#page-title, #page-title a:hover{
 	font-size: 28px;
 	margin: 20px;
+	background-color: #306bac;
+	color: white;
 }
 
 #logo-image {
@@ -1025,8 +844,9 @@ hr{
 }
 
 .icon-star-itinerary{
-    width: 30px;
+    width: 25px;
     vertical-align: middle;
+	margin-top: -5px;
 }
 
 #text-discussion-itinerary{
@@ -1099,7 +919,7 @@ hr{
 }
 
 .main_image_detail{
-    max-width: 300px;
+    max-width: 500px;
     float: left;
     margin-right: 25px;
 }
@@ -1110,4 +930,41 @@ hr{
 
 .cell-block div {
     display: inline-block;
+}
+
+.inner-page a{
+	color: white;
+	text-decoration: none;
+}
+
+#nap10, #nap10 td, #nap20, #nap20 td, #nap91_9, #nap91_9 td{
+	border: solid;
+	border-color: white;
+}
+
+#globe-img{
+	max-width: 30px;
+}
+
+.diskuze-prispevek{
+	border-color: white;
+	border: solid;
+	padding: 10px;
+	margin: 10px;
+}
+
+.small-image{
+	max-width: 100px;
+}
+
+.main-page-go:hover{
+	background-color: #306bac;
+}
+
+.main-page-go{
+	background-color: #306bac;
+}
+
+#menui2{
+	float: right;
 }

@@ -30,6 +30,10 @@ $(document).ready(function () {
         event.stopPropagation();
         event.preventDefault();
     });
+
+    $("#page-title").click(function (event) {
+        showMockup('index.html');
+    });
     $("#menui1").click(function (event) {
         showMockup('planner.html');
         event.stopPropagation();
@@ -75,6 +79,36 @@ $(document).ready(function () {
         showMockup('detailitinerary.html');
     });
 
+    $("#slide1").click(function (event) {
+        showMockup('detailitinerary.html');
+    });
+
+    $("#slide2").click(function (event) {
+        showMockup('detailitinerary.html');
+    });
+
+    $("#btn-1a").click(function (event) {
+        showMockup('detalakce.html');
+    });
+
+    $("#slide3").click(function (event) {
+        showMockup('detalakce.html');
+    });
+
+    $("#slide4").click(function (event) {
+        showMockup('detalakce.html');
+    });
+
+    $("#btnr-1").click(function (event) {
+        showMockup('detalakce.html');
+    });
+    $("#btnr-3").click(function (event) {
+        showMockup('detalakce.html');
+    });
+    $("#btnr-2").click(function (event) {
+        showMockup('detalakce.html');
+    });
+
     $("#btn-2").click(function (event) {
         showMockup('detailitinerary.html');
     });
@@ -91,12 +125,6 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
-    $("#nap42").click(function (event) {
-        showMockup('Hlavnístránka.html');
-        event.stopPropagation();
-        event.preventDefault();
-
-    });
 
     $("#email-label").click(function (event) {
 
@@ -175,19 +203,32 @@ function dataDetail(whe) {
     $(document).ready(function () {
         if (where === "praha") {
             $("#akce-title").text("Staroměstská radnice");
-            $("#main_image_detail").attr("src", "images/staromestska-radnice.jpg");
+            $("#main-image-akce").attr("src", "images/staromestska-radnice.jpg");
             $("#image1_detail").attr("src", "images/staromestska-radnice-2.jpg");
             $("#image2_detail").attr("src", "images/staromestska-radnice-3.jpg");
             $("#image3_detail").attr("src", "images/staromestska_radnice_vanoce.jpg");
         }
         else if (where === "morava") {
-            $("#akce-title").text("Staroměstská radnice");
+            $("#akce-title").text("Vyhlídka na severní moravě");
         }
         else if (where === "krumlov") {
-            $("#akce-title").text("Staroměstská radnice");
+            $("#akce-title").text("Drákula premiéra");
+            $("#main-image-akce").attr("src", "images/krumlov.jpg");
+            $("#date-time").text("21.6. 2017 - 20:00");
+            $("#adresa-akce").text("Zámmek Krumlov, Český Krumlov");
+            $("#web-akce").attr("href","");
+            $("#web-akce").text("http://www.krumlov.cz/");
         }
         else if (where === "zvirata-praha") {
             $("#akce-title").text("V Praze za zvířátky");
+        }
+        else if (where === "petnik"){
+            $("#akce-title").text("Restaurace u pětníka");
+            $("#main-image-akce").attr("src", "images/petnik.jpg");
+            $("#date-time").text("Každý den 10:00 - 24:00");
+            $("#adresa-akce").text("U pětníka, Hezká ulice, Praha 1");
+            $("#web-akce").attr("href","http://www.drest.cz/u-petnika/");
+            $("#web-akce").text("http://www.drest.cz/u-petnika/");
         }
     })
 
@@ -197,21 +238,27 @@ function itineraryDetail(whe) {
     whereItinerary = whe;
     localStorage.setItem("whereItinerary", whereItinerary);
     $(document).ready(function () {
-        if (where === "praha") {
-            $("#akce-title").text("Staroměstská radnice");
+        if (whereItinerary === "praha") {
+            $("#itinerary-title").text("Den ve staré Praze");
             $("#main_image_detail").attr("src", "images/staromestska-radnice.jpg");
             $("#image1_detail").attr("src", "images/staromestska-radnice-2.jpg");
             $("#image2_detail").attr("src", "images/staromestska-radnice-3.jpg");
             $("#image3_detail").attr("src", "images/staromestska_radnice_vanoce.jpg");
         }
-        else if (where === "morava") {
+        else if (whereItinerary === "morava") {
             $("#akce-title").text("Staroměstská radnice");
         }
-        else if (where === "krumlov") {
+        else if (whereItinerary === "krumlov") {
             $("#akce-title").text("Staroměstská radnice");
         }
-        else if (where === "zvirata-praha") {
-            $("#akce-title").text("V Praze za zvířátky");
+        else if (whereItinerary === "zvirata-praha") {
+            $("#itinerary-title").text("V Praze za zvířátky");
+            $("#akce1").text("9:00 - 13:00 Pražská zoo");
+            $("#akce2").text("13:00 - 13:30 Přesun metrem na Žižkov");
+            $("#akce3").text("13:30 - 14:30 Oběd v kočičí kavárně");
+            $("#akce4").text("14:30 - 15:00 Přesun metrem do Hloubětína");
+            $("#akce5").text("15:00 - 16:00 Mazlení s papoušky, fotografování");
+            $("#itinerary-main-image").attr("src", "images/zvirata.jpg")
         }
     })
 
@@ -223,6 +270,9 @@ function logIn() {
         $("#sign-in-form").toggleClass("invisible");
         $("#sign-out-form").toggleClass("invisible");
         $("#menui2").toggleClass("invisible");
+        $("#menui3").toggleClass("invisible");
+        $("#menui4").toggleClass("invisible");
+        $("#menui5").toggleClass("invisible");
         $("#recommended").toggleClass("invisible");
     }
 }
@@ -232,6 +282,9 @@ function logOut() {
         $("#sign-in-form").toggleClass("invisible");
         $("#sign-out-form").toggleClass("invisible");
         $("#menui2").toggleClass("invisible");
+        $("#menui3").toggleClass("invisible");
+        $("#menui4").toggleClass("invisible");
+        $("#menui5").toggleClass("invisible");
         $("#recommended").toggleClass("invisible");
     }
 }
@@ -256,4 +309,16 @@ window.onclick = function(event) {
 
 function refresh() {
     location.reload();
+}
+
+function plan() {
+    showMockup('detailitinerary.html');
+}
+
+function toMyTrips() {
+    showMockup('planned_trips.html');
+}
+
+function toPay() {
+    showMockup('payments.html');
 }

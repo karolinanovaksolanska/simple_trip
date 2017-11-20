@@ -34,11 +34,11 @@
 <body>
 
 
-<div id="inner-page" class="">
-    <span id="page-title" class="">Simple trip</span>
-
-    <img id="logo-image" src="images/logo.png" class=""/>
-
+<div id="inner-page">
+    <a id="page-title" href="index.html" class="main-page-go">
+        Simple trip
+        <img id="logo-image" src="images/logo.png" class=""/>
+    </a>
     <div id="sign-in-form" class="sign-in-form">
         <label for="email-field" style="display: inline">E-mail</label>
         <input id="email-field" style="display: inline" type="text" value="client@example.com"
@@ -50,25 +50,26 @@
     </div>
 
     <div id="sign-out-form" class="sign-out-form invisible">
-        <div class="dropdown">
-            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="profile.html">Profil</a>
-                <a href="planned_trips.html">Naplánované výlety</a>
-                <a href="my_trips.html">Uskutečněné výlety</a>
-                <a href="payments.html">Platby</a>
-            </div>
-        </div>
         <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
+
     <div id="menu" class="navbar-out">
         <div class="navbar-in">
             <ul class="nav">
                 <div>
-                    <li id="menui0" class="active"><a href="index.html">Hlavní stránka</a></li>
+                    <li id="menui0"><a href="#">Hlavní stránka</a></li>
                 </div>
                 <div>
                     <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui3" class="invisible"><a href="profile.html">Profil</a></li>
+                </div>
+                <div>
+                    <li id="menui4" class="invisible"><a href="my_trips.html">Moje výlety</a></li>
+                </div>
+                <div>
+                    <li id="menui5" class="invisible"><a href="payments.html">Platby</a></li>
                 </div>
                 <div>
                     <li id="menui2"><a href="registration.html">Registrace</a></li>
@@ -88,31 +89,33 @@
             <option>výlet ma Moravu</option>
         </select>
 
-        <button id="" type="button" class="itinerar-button">nový; itinerář</button>
+        <button id="" type="button" class="itinerar-button">nový itinerář</button>
 
         <button id="" type="button" class="itinerar-button">přidat do oblíbených</button>
 
-        <img class="main_image_detail" src="images/placeholder.jpg"/>
-
-        <img id="image1_detail" src="js/holder.js/95x95" class=""/>
-
-        <img id="image2_detail" src="js/holder.js/95x95" class=""/>
-        <img id="image3_detail" src="js/holder.js/95x95" class=""/>
-        <img id="image4_detail" src="js/holder.js/95x95" class=""/>
+        <img id="main-image-akce" class="main_image_detail" src="images/placeholder.jpg"/>
+<br>
+        <img id="image1_detail" src="images/placeholder.jpg" class="small-image"/>
+        <img id="image2_detail" src="images/placeholder.jpg" class="small-image"/>
+        <img id="image3_detail" src="images/placeholder.jpg" class="small-image"/>
+        <img id="image4_detail" src="images/placeholder.jpg" class="small-image"/>
         <br>
         <h3 id="akce-title" class="">Den ve Staré Praze</h3>
 
         <span id="" class="itinerar-label">Datum a čas:</span>
+        <span id="date-time"></span>
         <br>
 
         <span id="" class="itinerar-label">Adresa:</span>
+        <span id="adresa-akce"></span>
         <br>
 
-        <span id="" class="itinerar-label">Webov&aacute; str&aacute;nka: </span>
+        <span id="" class="itinerar-label">Webová stránka: </span>
 
-        <a><img id="" src="icons/globe-icon.png" class=""/></a>
+        <img id="globe-img" src="icons/globe-icon.png" class=""/><a id="web-akce"></a>
+
         <br>
-        <span id="" class="itinerar-label">Hodnocen&iacute;:</span>
+        <span id="" class="itinerar-label">Hodnocení:</span>
 
         <img id="nap91_14" src="icons/staricon.png" class="icon-star-itinerary"/>
 
@@ -178,56 +181,29 @@
         </div>
         <br>
 
-        <button id="nap90_3" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-        <div id="nap90_13" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">Aleshek<br/>
+        <div class="diskuze-prispevek">Aleshek 9. 8. 1972 23:59:59
+            <button type="button" class="itiner-button">reagovat</button>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore.</p>
         </div>
 
-        <img id="nap90_14" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
-
-        <div id="nap90_15" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972
-            23:59:59<br/></div>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore.</p>
-
-        <button id="nap90_5" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-
-        <div id="nap90_18" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/>
+        <div class="diskuze-prispevek">H4T3R 9. 8. 1972 23:00:00
+            <button type="button" class="itiner-button">reagovat</button>
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+                illum qui dolorem eum fugiat quo voluptas
+                nulla pariatur?</p>
         </div>
 
-        <img id="nap90_19" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
-
-        <div id="nap90_20" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">9. 8. 1972
-            23:00:00<br/></div>
-        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
-            illum qui dolorem eum fugiat quo voluptas
-            nulla pariatur?</p>
-
-        <button id="nap90_7" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-        <div id="nap90_22" class="" cellspacing="0" cellpadding="0">Aleshek<br/>
+        <div class="diskuze-prispevek">Aleshek 8. 8. 1972 23:59:59
+            <button type="button" class="itiner-button">reagovat</button>
+            <p>Ut enim ad minima veniam.</p>
         </div>
 
-        <img id="nap90_23" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
-
-        <div id="nap90_24" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">8. 8. 1972
-            23:59:59<br/></div>
-
-        <p>Ut enim ad minima veniam.</p>
-        <button id="nap90_9" type="button" class="napkeeRelativeComponent napkeeButton btn">reagovat</button>
-
-        <div id="nap90_27" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">H4T3R<br/>
+        <div class="diskuze-prispevek">H4T3R 7. 8. 1972 23:00:00ss
+            <button type="button" class="itiner-button">reagovat</button>
+            <p>Aperiel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </div>
-
-        <img id="nap90_28" src="icons/napkee/user.png" class="napkeeRelativeComponent napkeeIcon rotate360"/>
-
-        <div id="nap90_29" class="napkeeRelativeComponent napkeeParagraph" cellspacing="0" cellpadding="0">7. 8. 1972
-            23:00:00<br/></div>
-        <p>Aperiel illum qui dolorem eum fugiat quo voluptas
-            nulla pariatur?</p>
-
-
+<br>
         <div id="button-bar-detail" class="">
             <a class="button-bar-here" href="#" id="nap67i0">&lt;&lt;</a><a class="button-bar-here" href="#" id="nap67i1">&lt;</a><a
                 class="button-bar-here active" href="#" id="nap67i2">1</a><a class="button-bar-here" href="#" id="nap67i5">&gt;</a><a

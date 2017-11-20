@@ -34,11 +34,11 @@
 <body>
 
 
-<div id="inner-page" class="napkeeComponent napkeeCanvas">
-    <span id="page-title" class="napkeeRelativeComponent napkeeTitle">Simple trip</span>
-
-    <img id="logo-image" src="images/logo.png" class="napkeeRelativeComponent napkeeImage"/>
-
+<div id="inner-page">
+    <a id="page-title" href="index.html" class="main-page-go">
+        Simple trip
+        <img id="logo-image" src="images/logo.png" class=""/>
+    </a>
     <div id="sign-in-form" class="sign-in-form">
         <label for="email-field" style="display: inline">E-mail</label>
         <input id="email-field" style="display: inline" type="text" value="client@example.com"
@@ -50,15 +50,6 @@
     </div>
 
     <div id="sign-out-form" class="sign-out-form invisible">
-        <div class="dropdown">
-            <a><img onclick="dropDownMenu()" class="dropbtn" id="user-icon" src="icons/usericon.png"/></a>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="profile.html">Profil</a>
-                <a href="planned_trips.html">Naplánované výlety</a>
-                <a href="my_trips.html">Uskutečněné výlety</a>
-                <a href="payments.html">Platby</a>
-            </div>
-        </div>
         <a><img id="sign-out-button" style="display: inline" src="icons/sign-in.png" class=""/></a>
     </div>
 
@@ -70,6 +61,15 @@
                 </div>
                 <div>
                     <li id="menui1"><a href="planner.html">Plánovač</a></li>
+                </div>
+                <div>
+                    <li id="menui3" class="invisible"><a href="profile.html">Profil</a></li>
+                </div>
+                <div>
+                    <li id="menui4" class="invisible"><a href="my_trips.html">Moje výlety</a></li>
+                </div>
+                <div>
+                    <li id="menui5" class="invisible"><a href="payments.html">Platby</a></li>
                 </div>
                 <div>
                     <li id="menui2"><a href="registration.html">Registrace</a></li>
@@ -84,13 +84,14 @@
 
     <div class="outer-slide-div">
         <div class="arrow-icon1" id="arrow-icon1"><img src="icons/prev-icon.png" class=""/></div>
-        <div id="slide1" class="inner-slider-div">
+        <div id="slide1" class="inner-slider-div" onclick="itineraryDetail('praha')">
             <p>
-                <img class="img-landing-page" src="images/prague.jpg" class=""/>
+                <img class="img-landing-page" src="images/prague.jpg" onclick="itineraryDetail('praha')" class=""/>
                 <br/>
                 <b>Den ve Staré Praze</b><br/><br/>Praha<br/>500kč / os.
                 <br/>
-                <button id="btn-1" type="button" class="itinerar-button" onclick="itineraryDetail('praha')">detail</button>
+                <button id="btn-1" type="button" class="itinerar-button" onclick="itineraryDetail('praha')">detail
+                </button>
             </p>
         </div>
         <div id="slide2" class="inner-slider-div">
@@ -99,7 +100,9 @@
                 <br/>
                 <b>V Praze za zvířátky</b><br/><br/>Praha<br/>600kč / os.
                 <br/>
-                <button id="btn-2" type="button" onclick="itineraryDetail('zvirata-praha')" class="itinerar-button">detail</button>
+                <button id="btn-2" type="button" onclick="itineraryDetail('zvirata-praha')" class="itinerar-button">
+                    detail
+                </button>
             </p>
         </div>
         <div id="slide3" class="inner-slider-div">
@@ -136,7 +139,9 @@
                     <br/>
                     <b>Staroměstská radnice</b></br>Praha 1<br/>200kč / os.
                     <br/>
-                    <button id="btnr-1" type="button" class="itinerar-button">detail</button>
+                    <button id="btnr-1" type="button" onclick="dataDetail('staromestska')" class="itinerar-button">
+                        detail
+                    </button>
                 </p>
             </div>
             <div id="slider2" class="inner-recomended-slider-div">
@@ -145,7 +150,8 @@
                     <br/>
                     <b>Lenonova zeď</b></br>Praha 1<br/>zadarmo
                     <br/>
-                    <button id="btnr-2" type="button" class="itinerar-button">detail</button>
+                    <button id="btnr-2" type="button" onclick="dataDetail('lennon')" class="itinerar-button">detail
+                    </button>
                 </p>
             </div>
             <div id="slider3" class="inner-recomended-slider-div">
@@ -154,7 +160,8 @@
                     <br/>
                     <b>Focení s papoušky</b></br>Praha 4<br/>200kč / os.
                     <br/>
-                    <button id="btnr-3" type="button" class="itinerar-button">detail</button>
+                    <button id="btnr-3" type="button" onclick="dataDetail('papousci')" class="itinerar-button">detail
+                    </button>
                 </p>
             </div>
             <div class="arrow-icon2" id="arrow-icon4"><img src="icons/next-icon.png" class=""/></div>
