@@ -82,28 +82,69 @@
 
     <div class="inner-page">
         <h2 id="itinerary-title">Detail itineráře</h2>
+        <span id="" class="itinerar-label">Datum a čas:</span>
+        <span id="date-time-it">kdykoliv</span>
         <img id="itinerary-main-image" class="main_image_detail" src="images/prague.jpg"/>
+        <br><br>
+        <span id="" class="itinerar-label">Celková cena:</span>
+        <span id="price-it">500 - dospělá osoba, 300 - dítě</span>
+        <br><br>
+        <span class="itinerar-label">Rozplánovaný itinerář:</span>
         <div class="cell-block">
-            <div id="akce1" cellspacing="0" cellpadding="0" style="min-width: 400px">8.30 - 10.15 Návštěva Karlova mostu<br/></div>
-            <button type="button" class="itiner-button">Detail</button>
+            <div class="akce1" id="akce1" cellspacing="0" cellpadding="0" style="min-width: 400px">8.00 - 8.30 <span id="akce1-text">Cesta vlakem Regiojet</span><br/></div>
+            <img class="delete-icon akce1" onclick="showInfo('#akce1')" src="icons/info.png"/>
+            <img class="delete-icon akce1" onclick="deleteLine('.akce1')" src="icons/delete.png"/>
+            <img class="delete-icon akce1" onclick="moveDown('#akce1', '#akce2')" src="icons/ar-dn.png"/><br>
+            <span id="akce1-info" class="invisible">Tohle jsou základní informace, pro více informací klikněte na tlačítko detail: <button type="button" class="itiner-button akce1">Detail</button></span><br>
 
-            <div id="akce2" cellspacing="0" cellpadding="0" style="min-width: 400px">8.00 - 8.30 Cesta vlakem RegioJet<br/></div>
-            <button type="button" class="itiner-button">Detail</button>
 
-            <div id="akce3" cellspacing="0" cellpadding="0" style="min-width: 400px">10.15 - 12.00 Návštěva Pražského hradu<br/></div>
-            <button type="button" class="itiner-button">Detail</button>
+            <div class="akce2" id="akce2" cellspacing="0" cellpadding="0" style="min-width: 400px">8.30 - 9.30 <span id="akce2-text">Návštěva Karlova mostu</span><br/></div>
+            <img class="delete-icon akce2" onclick="showInfo('#akce2')" src="icons/info.png"/>
+            <img class="delete-icon akce2" onclick="deleteLine('.akce2')" src="icons/delete.png"/>
+            <img class="delete-icon akce2" onclick="moveUp('#akce2', '#akce1')" src="icons/ar-up.png"/>
+            <img class="delete-icon akce2" onclick="moveDown('#akce2', '#akce3')" src="icons/ar-dn.png"/><br>
+            <span id="akce2-info" class="invisible">Tohle jsou základní informace, pro více informací klikněte na tlačítko detail: <button type="button" class="itiner-button akce2">Detail</button></span><br>
 
-            <div id="akce4" cellspacing="0" cellpadding="0" style="min-width: 400px">12.00 - 13.30 Oběd v restauraci Velká klášterní restaurace<br/>
+            <div class="akce3" id="akce3" cellspacing="0" cellpadding="0" style="min-width: 400px">10.15 - 12.00 <span id="akce3-text">Návštěva Pražského hradu</span><br/></div>
+            <img class="delete-icon akce3" onclick="showInfo('#akce3')" src="icons/info.png"/>
+            <img class="delete-icon akce3" onclick="deleteLine('.akce3')" src="icons/delete.png"/>
+            <img class="delete-icon akce3" onclick="moveUp('#akce3', '#akce2')" src="icons/ar-up.png"/>
+            <img class="delete-icon akce3" onclick="moveDown('#akce3', '#akce4')" src="icons/ar-dn.png"/><br>
+            <span id="akce3-info" class="invisible">Tohle jsou základní informace, pro více informací klikněte na tlačítko detail: <button type="button" class="itiner-button akce3">Detail</button></span><br>
+
+            <div class="akce4" id="akce4" cellspacing="0" cellpadding="0" style="min-width: 400px">12.00 - 13.30 <span id="akce4-text">Oběd v restauraci Velká klášterní restaurace</span><br/>
             </div>
-            <button type="button" class="itiner-button">Detail</button>
+            <img class="delete-icon akce4" onclick="showInfo('#akce4')" src="icons/info.png"/>
+            <img class="delete-icon akce4" onclick="deleteLine('.akce4')" src="icons/delete.png"/>
+            <img class="delete-icon akce4" onclick="moveUp('#akce4', '#akce3')" src="icons/ar-up.png"/>
+            <img class="delete-icon akce4" onclick="moveDown('#akce4', '#akce5')" src="icons/ar-dn.png"/><br>
+            <span id="akce4-info" class="invisible">Tohle jsou základní informace, pro více informací klikněte na tlačítko detail: <button type="button" class="itiner-button akce4">Detail</button></span><br>
 
-            <div id="akce5" cellspacing="0" cellpadding="0" style="min-width: 400px">14.00 - 15.30 Návštěva Muzeum miniatur<br/></div>
-            <button type="button" class="itiner-button">Detail</button>
+            <div class="akce5" id="akce5" cellspacing="0" cellpadding="0" style="min-width: 400px">14.00 - 15.30 <span id="akce5-text">Návštěva Muzeum miniatur</span><br/></div>
+            <img class="delete-icon akce5" onclick="showInfo('#akce5')" src="icons/info.png"/>
+            <img class="delete-icon akce5" onclick="deleteLine('.akce5')" src="icons/delete.png"/>
+            <img class="delete-icon akce5" onclick="moveUp('#akce5', '#akce4')" src="icons/ar-up.png"/><br>
+            <span id="akce5-info" class="invisible">Tohle jsou základní informace, pro více informací klikněte na tlačítko detail: <button type="button" class="itiner-button akce5">Detail</button></span><br>
 
-            <div class="button-inside">
+            <div class="button-inside" style="text-align: center">
                 <button id="nap53" onclick="toMyTrips()" type="button" class="itinerar-button">Uložit</button>
 
                 <button id="nap54" type="button" class="itinerar-button">Storno</button></div>
+
+            <div class="modal-window invisible" id="modal_window_saved">
+                <h3>Pro uložení itineráře je třeba se nejprve přihlásit:</h3>
+                <div id="" style="text-align: center; margin-left: auto; margin-right: auto;">
+                    <label for="email-field" style="display: inline">E-mail</label>
+                    <input id="email-field" style="display: inline" type="text" value="client@example.com"
+                           class=""/><br>
+                    <label for="passwd-field" style="display: inline">Heslo</label>
+                    <input id="passwd-field" style="display: inline" type="text" value="*********"
+                           class=""/><br>
+                    <a><img id="sign-in-button2" style="display: inline" src="icons/sign-in.png" class=""/></a>
+                </div>
+                <br><br><br>
+                <div>Nemáte ještě účet? <a href="registration.html" style="color: black">Zaregistrujte se!</a></div>
+            </div>
         </div>
 
     </div>

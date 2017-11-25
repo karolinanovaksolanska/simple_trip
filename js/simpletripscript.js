@@ -113,6 +113,28 @@ $(document).ready(function () {
         showMockup('detailitinerary.html');
     });
 
+    $("#btn-2a").click(function (event) {
+       $("#btn-2a").toggleClass("invisible");
+       $("#btn-3a").toggleClass("invisible");
+    });
+
+    $("#btn-3a").click(function (event) {
+       $("#btn-2a").toggleClass("invisible");
+        $("#btn-3a").toggleClass("invisible");
+    });
+
+    $("#btn-5a").click(function (event) {
+       $("#btn-5a").toggleClass("invisible");
+       $("#btn-6a").toggleClass("invisible");
+    });
+
+    $("#btn-6a").click(function (event) {
+       $("#btn-5a").toggleClass("invisible");
+        $("#btn-6a").toggleClass("invisible");
+    });
+
+    
+
     $("#btn-3").click(function (event) {
         showMockup('detalakce.html');
     });
@@ -163,6 +185,17 @@ $(document).ready(function () {
         loggedIn = true;
         localStorage.setItem("loggedIn", loggedIn);
         logIn();
+    })
+
+    $('.my_select_box').on('change', function(evt, params) {
+        $("#vez").toggleClass("invisible");
+    });
+
+    $("#sign-in-button2").click(function (event) {
+        loggedIn = true;
+        localStorage.setItem("loggedIn", loggedIn);
+        logIn();
+        showMockup('my_trips.html')
     })
 
     $("#sign-out-button").click(function (event) {
@@ -241,6 +274,7 @@ function itineraryDetail(whe) {
         if (whereItinerary === "praha") {
             $("#itinerary-title").text("Den ve staré Praze");
             $("#main_image_detail").attr("src", "images/staromestska-radnice.jpg");
+            $("#date-time-it").text("Každý den, kromě pondělí 8:30 - 17:00");
             $("#image1_detail").attr("src", "images/staromestska-radnice-2.jpg");
             $("#image2_detail").attr("src", "images/staromestska-radnice-3.jpg");
             $("#image3_detail").attr("src", "images/staromestska_radnice_vanoce.jpg");
@@ -316,9 +350,42 @@ function plan() {
 }
 
 function toMyTrips() {
-    showMockup('planned_trips.html');
+    if (loggedIn) {
+        showMockup('planned_trips.html');
+    }
+    else {
+        $("#modal_window").toggleClass("invisible");
+    }
 }
 
 function toPay() {
     showMockup('payments.html');
+}
+
+function deleteLine(lineId) {
+    $(lineId).toggleClass("invisible");
+}
+
+function moveUp(lineId, futureId) {
+    var future = $(futureId + "-text").text();
+    $(futureId + "-text").text($(lineId + "-text").text());
+    $(lineId + "-text").text(future);
+}
+
+function moveDown(lineId, futureId) {
+    var future = $(futureId + "-text").text();
+    $(futureId + "-text").text($(lineId + "-text").text());
+    $(lineId + "-text").text(future);
+}
+
+function showInfo(id) {
+    $(id+"-info").toggleClass("invisible");
+}
+
+function showModalSaved() {
+    $("#modal_window_saved").toggleClass("invisible");
+}
+
+function showVez() {
+    $("#vez").toggleClass("invisible");
 }

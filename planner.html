@@ -87,12 +87,10 @@
             <span id="from-date-label">Od:</span>
             <div id="from-date-input" class="input-append date" data-date="1. 1. 2001">
                 <input id="from-date-input-dp" type="date" value="1. 1. 2001">
-                <span class="add-on"><i class="icon-calendar"></i></span>
             </div>
             <span id="to-date-label">Do: </span>
             <div id="to-date-input" class="input-append date" data-date="1. 1. 2001">
-                <input id="to-date-inputdp" type="text" value="1. 1. 2001">
-                <span class="add-on"><i class="icon-calendar"></i></span>
+                <input id="to-date-inputdp" type="date" value="1. 1. 2001">
             </div>
             <br/>
 
@@ -148,7 +146,10 @@
         <div class="button"><button id="plan-button" onclick="plan()" type="button" class="">naplánovat!</button></div>
         <h3>Přidejte si akci, nebo místo (nepovinně)</h3>
 
-        <div id="search-misto-akci-planner"><input type="text" placeholder="název místa / akce" class="search-query"/></div>
+        <div id="search-misto-akci-planner"><select type="text" placeholder="název místa / akce" class="search-query my_select_box">
+            <option>-------</option>
+            <option onclick="showVez()">Věž sv. Jakuba</option>
+        </select></div>
 
         <div style="margin-left: 30px" class="outer-slide-div">
             <div class="inner-slider-div">
@@ -158,19 +159,19 @@
                     <b>Restaurace u Pětníka</b>
                     <br/>
                     <button id="btn-1a" onclick="dataDetail('petnik')" type="button" class="button btn">detail</button>
-                    <button id="btn-2" type="button" class="button btn">přidat do plánu</button>
-                    <button id="btn-3" type="button" class="button btn">odebrat z plánu</button>
+                    <button id="btn-2a" type="button" class="button btn invisible">přidat do plánu</button>
+                    <button id="btn-3a" type="button" class="button btn">odebrat z plánu</button>
                 </p>
             </div>
-            <div style="margin-left: 30px" class="inner-slider-div">
+            <div style="margin-left: 30px" id="vez" class="inner-slider-div invisible">
                 <p style="color: #000000">
                     <img class="img-landing-page" src="images/jakub.jpg" class=""/>
                     <br/>
                     <b>Věž sv. Jakuba</b>
                     <br/>
-                    <button id="btn-4" type="button" class="button btn">detail</button>
-                    <button id="btn-5" type="button" class="button btn">přidat do plánu</button>
-                    <button id="btn-6" type="button" class="button btn">odebrat z plánu</button>
+                    <button id="btn-4a" type="button" onclick="dataDetail('petnik')" class="button btn">detail</button>
+                    <button id="btn-5a" type="button" class="button btn">přidat do plánu</button>
+                    <button id="btn-6a" type="button" class="button btn invisible">odebrat z plánu</button>
                 </p>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Napkee export</title>
+    <title>Simple trip - Profil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -75,7 +75,9 @@
             </ul>
         </div>
     </div>
-
+    <div class="invisible" id="modal_window_saved">
+        <h5>Vaše údaje byly uloženy.</h5>
+    </div>
     <fieldset class="registration">
         <h3>Nastavení účtu</h3>
         <form>
@@ -91,7 +93,7 @@
             <span id="" class="form-label">Oblast</span>
             <input id="" type="text" value="Praha" class=""/>
             <div class="button-inside">
-                <button id="" onclick="refresh()" type="button" class="itinerar-button">uložit</button>
+                <button id="" onclick="showModalSaved()" type="button" class="itinerar-button">uložit</button>
 
                 <button id="" onclick="refresh()" type="button" class="itinerar-button">obnovit původní</button>
             </div>
@@ -111,7 +113,7 @@
         <input id="" type="text" value="" class=""/>
 
         <div class="button-inside">
-            <button id="nap25" type="button" onclick="refresh()" class="itinerar-button">uložit</button>
+            <button id="nap25" type="button" onclick="showModalSaved()" class="itinerar-button">uložit</button>
         </div>
 
     </fieldset>
@@ -176,7 +178,7 @@
         </div>
         <br>
         <div class="button-inside">
-            <button id="" type="button" onclick="refresh()" class="itinerar-button">uložit</button>
+            <button id="" type="button" onclick="showModalSaved()" class="itinerar-button">uložit</button>
 
             <button id="" type="button" onclick="refresh()" class="itinerar-button">obnovit původní</button>
         </div>
@@ -184,6 +186,7 @@
     </fieldset>
 
     <hr>
+
 
     <div class="footer">
         <div id="help" class="help-contact"><a href="help.html">Nápověda</a></div>

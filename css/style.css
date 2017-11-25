@@ -668,6 +668,12 @@ hr{
 	width: 24px;
 }
 
+#sign-in-button2{
+	vertical-align: middle;
+	width: 24px;
+
+}
+
 #sign-out-button {
     vertical-align: middle;
     width: 24px;
@@ -695,11 +701,21 @@ hr{
 }
 
 #from-date-input-dp{
-    width: 180px;
+    width: 206px;
+	background-image: url("../icons/calendar.jpg");
+	background-position: right center;
+	background-position-x: 190px;
+	background-repeat: no-repeat;
+	background-size: 10%;
 }
 
 #to-date-inputdp{
-    width: 180px;
+    width: 206px;
+	background-image: url("../icons/calendar.jpg");
+	background-position: right center;
+	background-position-x: 190px;
+	background-repeat: no-repeat;
+	background-size: 10%;
 }
 
 #area-label, #price-label, #vzdalenost-do-label, #druh-vyletu-label,
@@ -925,7 +941,7 @@ hr{
 }
 
 .cell-block{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .cell-block div {
@@ -967,4 +983,30 @@ hr{
 
 #menui2{
 	float: right;
+}
+
+.delete-icon{
+	width: 30px;
+	vertical-align: middle;
+}
+
+.modal-window{
+	position: absolute;
+	background-color: white;
+	top:100px;
+	color: black;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: black;
+	padding: 10px;
+	text-align: center;
+}
+
+#modal_window_saved{
+	text-align: center;
+	background-color: white;
+	color: black;
+	border-style: solid;
+	border-color: black;
+	margin-bottom: 5px;
 }
