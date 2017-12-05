@@ -75,9 +75,28 @@ $(document).ready(function () {
 
     });
 
+    $("#send-discussion-btn").click(function (event) {
+        $("#prispevek1-odstavec").text($('textarea#text-discussion-itinerary').val());
+        var d = new Date();
+        var strDate = (d.getMonth()+1) + ". " + d.getDate() + ". "  + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        $("#datum").text(strDate);
+        $("#prispevek1").toggleClass("invisible")
+
+    });
+
     $("#btn-1").click(function (event) {
         showMockup('detailitinerary.html');
     });
+
+
+    $("#btn-plan-1").click(function (event) {
+        showMockup('detailitinerary.html');
+    });
+
+    $("#btn-plan-2").click(function (event) {
+        showMockup('detalakce.html');
+    });
+
 
     $("#slide1").click(function (event) {
         showMockup('detailitinerary.html');
@@ -198,6 +217,7 @@ $(document).ready(function () {
         showMockup('my_trips.html')
     })
 
+
     $("#sign-out-button").click(function (event) {
         loggedIn = false;
         localStorage.setItem("loggedIn", loggedIn);
@@ -207,6 +227,10 @@ $(document).ready(function () {
     $("#arrow-icon2").click(function (event) {
         $("#slide1").toggleClass("invisible");
         $("#slide4").toggleClass("invisible");
+    })
+
+    $("#zrusit-platbu").click(function (event) {
+        $("#zrusena-platba").toggleClass("invisible");
     })
 
     $("#arrow-icon1").click(function (event) {
@@ -296,6 +320,7 @@ function itineraryDetail(whe) {
         }
     })
 
+
 }
 
 
@@ -350,11 +375,11 @@ function plan() {
 }
 
 function toMyTrips() {
-    if (loggedIn) {
+    if (loggedIn == "true") {
         showMockup('planned_trips.html');
     }
     else {
-        $("#modal_window").toggleClass("invisible");
+        $("#modal_window_saved").toggleClass("invisible");
     }
 }
 
@@ -388,4 +413,25 @@ function showModalSaved() {
 
 function showVez() {
     $("#vez").toggleClass("invisible");
+}
+
+function save3() {
+    $("#setting3-saved").toggleClass("invisible", 5000);
+    window.setTimeout(function() {
+        $("#setting3-saved").toggleClass('invisible');
+    }, 5000);
+}
+
+function save1() {
+    $("#setting1-saved").toggleClass("invisible", 5000);
+    window.setTimeout(function() {
+        $("#setting1-saved").toggleClass('invisible');
+    }, 5000);
+}
+
+function save2() {
+    $("#setting2-saved").toggleClass("invisible", 5000);
+    window.setTimeout(function() {
+        $("#setting2-saved").toggleClass('invisible');
+    }, 5000);
 }

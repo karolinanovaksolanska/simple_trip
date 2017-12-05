@@ -80,6 +80,7 @@
     </div>
     <fieldset class="registration">
         <h3>Nastavení účtu</h3>
+        <div id="setting1-saved" style="background-color: green; text-align: center" class="invisible">Nastavení bylo uloženo</div><br>
         <form>
             <span id="" class="form-label">Jméno</span>
             <input id="nap11" type="text" value="Jan" class=""/>
@@ -93,7 +94,8 @@
             <span id="" class="form-label">Oblast</span>
             <input id="" type="text" value="Praha" class=""/>
             <div class="button-inside">
-                <button id="" onclick="showModalSaved()" type="button" class="itinerar-button">uložit</button>
+            <button id="" onclick="save1()" type="button" class="itinerar-button">uložit</button>
+
 
                 <button id="" onclick="refresh()" type="button" class="itinerar-button">obnovit původní</button>
             </div>
@@ -101,8 +103,9 @@
     </fieldset>
     <br>
     <fieldset class="registration">
-        <h3>Změna hesla</h3>
 
+        <h3>Změna hesla</h3>
+        <div id="setting2-saved" style="background-color: green; text-align: center" class="invisible">Heslo bylo změněno</div><br>
         <span id="" class="form-label">Původní heslo</span>
         <input id="" type="text" value="" class=""/>
 
@@ -113,13 +116,15 @@
         <input id="" type="text" value="" class=""/>
 
         <div class="button-inside">
-            <button id="nap25" type="button" onclick="showModalSaved()" class="itinerar-button">uložit</button>
+
+            <button id="nap25" type="button" onclick="save2()" class="itinerar-button">uložit</button>
         </div>
 
     </fieldset>
     <br>
     <fieldset class="registration">
         <h3>Upřednostňuji</h3>
+        <div id="setting3-saved" style="background-color: green; text-align: center" class="invisible">Nastavení bylo uloženo</div>
         <div style="text-align: center">
             <div id="" class="checkbox-group" style="display: inline-block; vertical-align: top">
                 <h4 id="" class="">Typ akcí</h4>
@@ -178,8 +183,7 @@
         </div>
         <br>
         <div class="button-inside">
-            <button id="" type="button" onclick="showModalSaved()" class="itinerar-button">uložit</button>
-
+            <button id="" type="button" onclick="save3()" class="itinerar-button">uložit</button>
             <button id="" type="button" onclick="refresh()" class="itinerar-button">obnovit původní</button>
         </div>
 

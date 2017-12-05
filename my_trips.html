@@ -80,6 +80,7 @@
     <br/>
     <div class="inner-page">
         <h3>Aktuálně naplánované itineráře</h3>
+
         <div class="outer-slider-my-div" style="margin-right: auto; margin-left: auto">
             <div id="slide-plan1" class="inner-slider-my-div">
                 <p>
@@ -105,16 +106,45 @@
         </div>
         <hr>
         <h3>Absolvované výlety</h3>
+
         <div class="outer-slider-my-div" style="margin-right: auto; margin-left: auto">
-            <div id="slide-my1" class="inner-slider-my-div">
+            <div id="slide-plan1" class="inner-slider-my-div">
                 <p>
                     <img class="img-landing-page" src="images/prague.jpg" class=""/>
                     <br/>
                     <b>Den ve Staré Praze</b><br/><br/>Praha<br/>800kč / os průměrně
+
                     <br/>
-                    <button id="btn-my-1" type="button" class="itinerar-button" onclick="itineraryDetail('praha')">
+                    <button id="btn-plan-1" type="button" class="itinerar-button" onclick="itineraryDetail('praha')">
                         detail
                     </button>
+                    <button id="btn-plan-11" onclick="toPay()" type="button" class="itinerar-button">zaplatit</button>
+                </p>
+            </div>
+            <div id="slide-my2" class="inner-slider-my-div">
+                <p>
+                    <img class="img-landing-page" src="images/zvirata.jpg" class=""/>
+                    <br>
+                    <b>V Praze za zvířátky</b><br/><br/>Praha<br/><span style="font-weight: 600; color: greenyellow">Zaplaceno</span>
+                    <br/>
+                    <button id="btn-my-2" type="button" onclick="itineraryDetail('zvirata-praha')"
+                            class="itinerar-button">
+                        detail
+                    </button>
+
+                </p>
+            </div>
+        </div>
+        <hr>
+        <h3>Absolvované výlety</h3>
+        <div class="outer-slider-my-div" style="margin-right: auto; margin-left: auto">
+            <div id="slide-plan2" class="inner-slider-my-div">
+                <p>
+                    <img class="img-landing-page" src="images/krumlov.jpg" class=""/>
+                    <br/>
+                    <b>Dracula premiéra</b><br/>19. 6. 2001<br/>Český Krumlov<br/>
+                    <br/>
+                    <button id="btn-plan-2" type="button" onclick="dataDetail('krumlov')" class="itinerar-button">detail</button>
                     <button type="button" class="itinerar-button">zopakovat</button>
                     <br>
                     <img src="icons/staricon.png" class="icon-star-itinerary"/>
@@ -130,14 +160,16 @@
                     <button type="button" class="itinerar-button">ohodnotit</button>
                 </p>
             </div>
-            <div id="slide-my2" class="inner-slider-my-div">
+            <div id="slide-my1" class="inner-slider-my-div">
                 <p>
                     <img class="img-landing-page" src="images/zvirata.jpg" class=""/>
                     <br>
                     <b>V Praze za zvířátky</b><br/><br/>Praha<br/>600kč / os průměrně
+
                     <br/>
-                    <button id="btn-my-2" type="button" onclick="itineraryDetail('zvirata-praha')"
-                            class="itinerar-button">
+                    <b>Den ve Staré Praze</b><br/><br/>Praha<br/>500kč / os.
+                    <br/>
+                    <button id="btn-my-1" type="button" class="itinerar-button" onclick="itineraryDetail('praha')">
                         detail
                     </button>
                     <button type="button" class="itinerar-button">zopakovat</button>
