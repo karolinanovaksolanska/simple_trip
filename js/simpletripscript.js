@@ -383,6 +383,14 @@ function toMyTrips() {
     }
 }
 
+function sendPressed() {
+    $("#modal_window_ok").toggleClass("invisible");
+}
+
+function hideOK(){
+    $("#modal_window_ok").toggleClass("invisible");
+}
+
 function toPay() {
     showMockup('payments.html');
 }

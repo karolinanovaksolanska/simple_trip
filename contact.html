@@ -75,7 +75,14 @@
             </ul>
         </div>
     </div>
-
+    <div class="modal-window invisible" style="text-align: center" id="modal_window_ok">
+        <h3>Vaše zpráva byla odeslána. Budeme vás kontaktovat.</h3>
+        <div id="" style="text-align: center; margin-left: auto; margin-right: auto;">
+            <button id="ok-button" onclick="hideOK()" style="display: inline" class="">OK</button>
+        </div>
+        <br><br><br>
+        <div>Nemáte ještě účet? <a href="registration.html" style="color: black">Zaregistrujte se!</a></div>
+    </div>
     <fieldset id="registration">
         <h3>Kontaktní formulář</h3>
         <form id="contact-form">
@@ -89,7 +96,7 @@
             <textarea id="contact-text-box" class="">Dobrý den, Nefunguje mi přihlášení.S pozdravem, Novák</textarea>
 
             <div class="button">
-                <button id="contact-button" type="button" class="">Odeslat</button>
+                <button id="contact-button" onclick="sendPressed()" type="button" class="">Odeslat</button>
             </div>
 
         </form>
