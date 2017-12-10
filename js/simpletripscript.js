@@ -13,6 +13,11 @@ if (!loggedIn){
     loggedIn = false;
 }
 
+var goingFromPlan = localStorage.getItem("goingFromPlan");
+if (!goingFromPlan){
+    goingFromPlan = false;
+}
+
 var where = localStorage.getItem("where");
 if (!where){
     where = "praha";
@@ -22,7 +27,6 @@ var whereItinerary = localStorage.getItem("whereItinerary");
 if (!whereItinerary){
     whereItinerary = "praha";
 }
-var wentRight = false;
 
 $(document).ready(function () {
     $("#menui0").click(function (event) {
@@ -251,6 +255,11 @@ $(document).ready(function () {
     itineraryDetail(whereItinerary);
     dataDetail(where);
    logIn();
+   if (goingFromPlan === "true"){
+       $("#modal_window_pl").toggleClass("invisible");
+       goingFromPlan = false;
+       localStorage.setItem("goingFromPlan", goingFromPlan);
+   }
 
 });
 
@@ -376,7 +385,9 @@ function plan() {
 
 function toMyTrips() {
     if (loggedIn == "true") {
-        showMockup('planned_trips.html');
+        showMockup('my_trips.html');
+        goingFromPlan = true;
+        localStorage.setItem("goingFromPlan", goingFromPlan);
     }
     else {
         $("#modal_window_saved").toggleClass("invisible");
@@ -442,4 +453,12 @@ function save2() {
     window.setTimeout(function() {
         $("#setting2-saved").toggleClass('invisible');
     }, 5000);
+}
+
+function hideModalPlanned() {
+    $("#modal_window_pl").toggleClass("invisible");
+}
+
+function goPay() {
+    
 }

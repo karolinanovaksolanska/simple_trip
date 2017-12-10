@@ -55,24 +55,36 @@
     <div id="menu" class="navbar-out">
         <div class="navbar-in">
             <ul class="nav">
-                <div>
-                    <li id="menui0"><a href="#">Hlavní stránka</a></li>
-                </div>
-                <div>
-                    <li id="menui1" class="active"><a href="planner.html">Plánovač</a></li>
-                </div>
-                <div>
-                    <li id="menui3" class="invisible"><a href="profile.html">Profil</a></li>
-                </div>
-                <div>
-                    <li id="menui4" class="invisible"><a href="my_trips.html">Moje výlety</a></li>
-                </div>
-                <div>
-                    <li id="menui5" class="invisible"><a href="payments.html">Platby</a></li>
-                </div>
-                <div>
-                    <li id="menui2"><a href="registration.html">Registrace</a></li>
-                </div>
+                <a href="#">
+                    <div>
+                        <li id="menui0">Hlavní stránka</li>
+                    </div>
+                </a>
+                <a href="planner.html">
+                    <div>
+                        <li id="menui1" class="active">Plánovač</li>
+                    </div>
+                </a>
+                <a href="profile.html">
+                    <div>
+                        <li id="menui3" class="invisible">Profil</li>
+                    </div>
+                </a>
+                <a href="my_trips.html">
+                    <div>
+                        <li id="menui4" class="invisible">Moje výlety</li>
+                    </div>
+                </a>
+                <a href="payments.html">
+                    <div>
+                        <li id="menui5" class="invisible">Platby</li>
+                    </div>
+                </a>
+                <a href="registration.html">
+                    <div>
+                        <li id="menui2">Registrace</li>
+                    </div>
+                </a>
             </ul>
         </div>
     </div>
@@ -84,20 +96,20 @@
         <h3>Sestaven&iacute; v&yacute;letu</h3>
         <fieldset class="fieldset-class">
             <legend>Čas a místo</legend>
-            <span id="from-date-label">Od:</span>
+            <span id="from-date-label">Od:*</span>
             <div id="from-date-input" class="input-append date" data-date="1. 1. 2001">
                 <input id="from-date-input-dp" type="date" value="1. 1. 2001">
             </div>
-            <span id="to-date-label">Do: </span>
+            <span id="to-date-label">Do:* </span>
             <div id="to-date-input" class="input-append date" data-date="1. 1. 2001">
                 <input id="to-date-inputdp" type="date" value="1. 1. 2001">
             </div>
             <br/>
 
-            <span id="area-label" class="">Oblast:</span>
+            <span id="area-label" class="">Oblast:*</span>
             <input id="area-input" type="text" value="Telč"/>
 
-            <span id="vzdalenost-do-label">Vzdálenost do:</span>
+            <span id="vzdalenost-do-label">Vzdálenost do:*</span>
             <input id="vzdalenost-do-input" type="text" value="50 km"/>
             <br/>
             <span id="price-label">Max. cena:</span>
@@ -110,18 +122,20 @@
 
         <fieldset class="fieldset-class">
             <legend>Počet účastníků</legend>
-            <span id="adult-count-label">Dospěl&yacute;ch</span>
+            <span id="adult-count-label">Dospěl&yacute;ch*</span>
             <input id="adult-count-input" type="number" value="2"/>
 
-            <span id="kids-count-label">Dět&iacute;</span>
+            <span id="kids-count-label">Dět&iacute;*</span>
             <input id="kids-count-input" type="number" value="1"/>
             <br>
-            <span id="student-count-label">Studentů</span>
+            <span id="student-count-label">Studentů*</span>
             <input id="student-count-input" type="number" value="0"/>
 
-            <span id="senior-count-label">Seniorů</span>
+            <span id="senior-count-label">Seniorů*</span>
             <input id="senior-count-input" type="number" value="1"/>
         </fieldset>
+<br>
+        <p>Položky označené * jsou pro vytvoření itineráře povinné.</p>
 
         <fieldset class="fieldset-class">
             <legend>Ostatní nastavení (nepovinné)</legend>
@@ -129,7 +143,7 @@
             <select id="druh-vyletu-input">
                 <option>kulturn&iacute; akce</option>
             </select>
-            <span id="difficulty-label">Fyzická n&aacute;ročnost</span>
+            <span id="difficulty-label">Fyzická n&aacute;ročnost:*</span>
             <select id="difficulty-input">
                 <option>nízká</option>
                 <option>střední</option>
@@ -140,9 +154,11 @@
             <div class="checkbox-outer"><input type="checkbox"><span class="checkbox-own">Bezbariérový přístup</span><br></div>
             <div class="checkbox-outer"><input type="checkbox"><span class="checkbox-own">Vlastní doprava</span><br></div>
         </fieldset>
+        <br>
+        <p>* Fyzická náročnost z hlediska pohybu osob (nízká - vhodná pro malé děti, nebo pro osoby se sníženou schopností pohybu)</p>
 
         </form>
-
+<br>
         <div class="button"><button id="plan-button" onclick="plan()" type="button" class="">naplánovat!</button></div>
         <h3>Přidejte si akci, nebo místo (nepovinně)</h3>
 
