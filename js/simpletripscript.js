@@ -234,7 +234,7 @@ $(document).ready(function () {
     })
 
     $("#zrusit-platbu").click(function (event) {
-        $("#zrusena-platba").toggleClass("invisible");
+        $("#modal_window_pay").toggleClass("invisible");
     })
 
     $("#arrow-icon1").click(function (event) {
@@ -262,6 +262,15 @@ $(document).ready(function () {
    }
 
 });
+
+function deletePlOK() {
+    $("#zrusena-platba").toggleClass("invisible");
+    $("#modal_window_pay").toggleClass("invisible");
+}
+
+function deletePlNO() {
+    $("#modal_window_pay").toggleClass("invisible");
+}
 
 function dataDetail(whe) {
     where = whe;
@@ -395,6 +404,8 @@ function toMyTrips() {
 }
 
 function sendPressed() {
+    $(".contact-form-input").val("");
+    $("#contact-text-box").val("");
     $("#modal_window_ok").toggleClass("invisible");
 }
 
@@ -405,9 +416,19 @@ function hideOK(){
 function toPay() {
     showMockup('payments.html');
 }
-
+var lineID = 1;
 function deleteLine(lineId) {
-    $(lineId).toggleClass("invisible");
+    lineID = lineId;
+    $("#modal_window_ln").toggleClass("invisible");
+}
+
+function deleteOK() {
+    $(lineID).toggleClass("invisible");
+    $("#modal_window_ln").toggleClass("invisible");
+}
+
+function deleteNO() {
+    $("#modal_window_ln").toggleClass("invisible");
 }
 
 function moveUp(lineId, futureId) {
@@ -460,5 +481,13 @@ function hideModalPlanned() {
 }
 
 function goPay() {
-    
+
+}
+
+function newHeslo(){
+    $("#modal_window_hl").toggleClass("invisible");
+}
+
+function ok() {
+    $("#modal_window_hl").toggleClass("invisible");
 }
